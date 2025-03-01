@@ -125,14 +125,11 @@
       }
 
       a {
-        color: var(--color-black);
+        color: var(--color-black) !important;
         text-decoration: none;
         font-weight: 400;
         text-align: right;
-        float: right;
-        max-width: 65%;
         text-overflow: ellipsis;
-        overflow: hidden;
         white-space: nowrap;
       }
 
@@ -166,8 +163,9 @@
         text-transform: uppercase;
         letter-spacing: 0.1em;
         font-weight: 700;
-        line-height: 1;
+        line-height: 1.6;
         width: 100%;
+        margin-bottom: var(--space-xl);
       }
 
       .section-title::after {
@@ -180,8 +178,8 @@
         display: inline-block;
       }
 
-      .experiences article:not(:first-child), .section-title {
-        padding-top: var(--space-xl) !important;
+      .experiences article.experience:not(#experience-ckm-ckp) {
+        margin-top: var(--space-xl);
       }
 
       .experiences
@@ -194,6 +192,7 @@
       .experience,
       .skills {
         display: flex;
+        align-items: baseline; /* Change from 'start' to 'baseline' for text alignment */
         flex-direction: row;
         flex-wrap: no-wrap;
       }
@@ -203,6 +202,17 @@
         width: 250px;
         display: flex;
         flex-direction: column;
+        flex-shrink: 0;
+        margin: 0;
+      }
+
+      .skills .skills-list {
+        flex: 1; /* Take remaining width */
+        padding-top: 0; /* Remove any top padding */
+        margin-top: 0; /* Remove any top margin */
+      }
+      .skills .skills-list li {
+        line-height: 1.6;
       }
 
       .experience .experience-head {
@@ -225,6 +235,9 @@
       .skills-title {
         font-size: var(--font-xs);
         letter-spacing: 0.06em;
+        font-weight: 600;
+        text-transform: capitalize;
+        line-height: 1.6;
       }
 
       .experience .experience-title {
@@ -242,13 +255,32 @@
       .skills-list li {
         display: inline;
         font-size: var(--font-xs);
-        margin-right: 0.1rem;
+        line-height: 1.6;
+        margin-right: 0.05rem;
       }
       .skills-list li::after {
-        content: " , ";
+        content: ", ";
+        line-height: 1.6;
       }
       .skills-list li:last-child::after {
         content: "";
+        line-height: 1.6;
+      }
+
+      /* Style for call-to-action links section */
+      .experience-content {
+        width: 100%;
+      }
+
+      #experience-additional-experience .experience-content {
+        background-color: var(--color-blue_2);
+      }
+      .cta-links {
+        display: inline;
+        background-color: var(--color-blue_2);
+        border-left: 5px solid var(--color-blue);
+        padding: var(--space-l) var(--space-m);
+        min-width: 100%;
       }
 
       /* Print media query */
@@ -266,12 +298,12 @@
           margin: 0;
           padding: 20px;
         }
-        
-        /* .section-title {
+
+        .section-title {
           break-after: avoid;
           page-break-after: avoid;
-        } */
-        
+        }
+
         .section-title::after {
           background-color: var(--color-gray-border) !important;
         }
@@ -297,6 +329,16 @@
           display: table-cell;
           width: 33%;
           page-break-inside: avoid;
+        }
+        .skills {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+
+        .skills .skills-title,
+        .skills .skills-list {
+          display: table-cell; /* Use table-cell for maximum print compatibility */
+          vertical-align: top;
         }
       }
     </style>
@@ -405,12 +447,18 @@
           </div>
           <div class="experience-content">
             <p class="section-content">
-              Branded companies like <a>French D (Dubai)</a>,
-              <a>Miratti (Morocco)</a>, Maud Diamond (Brazil), and
-              <a>Horde Studio (USA)</a>, by applying
-              <strong>Agile practices</strong> and web
+              Branded companies like
+              <a href="https://french-dandy.com/">French D (Dubai)</a>,
+              <a href="https://mirattibags.com/">Miratti (Morocco)</a>, Maud
+              Diamond (Brazil), and
+              <a href="https://hordestudio.com/">Horde Studio (USA)</a>, by
+              applying <strong>Agile practices</strong> and web
               <strong>development techniques</strong>, showcasing their
-              portfolio in events like <a>Forbes ME</a>.
+              portfolio in events like
+              <a
+                href="https://www.instagram.com/forbesmiddleeast/p/DBcEJftoZI5/?img_index=8"
+                >Forbes ME</a
+              >.
             </p>
           </div>
         </article>
@@ -466,21 +514,15 @@
             </p>
           </div>
         </article>
-        <article class="experience">
+        <article id="experience-additional-experience" class="experience">
           <div class="experience-summary"></div>
           <div class="experience-content">
-            <p class="section-content">
-              For additional experience, or contribution, please review my
-              <a
-                href="https://www.linkedin.com/in/mohamedamine-sayagh/"
-                aria-label="LinkedIn"
-                >LinkedIn</a
-              >
-              <a href="https://masayagh.com/en/" aria-label="Portfolio"
-                >Portfolio</a
-              >,or my
+            <p class="section-content cta-links">
+              For additional experience, or contribution, please review my <a href="https://www.linkedin.com/in/mohamedamine-sayagh/" aria-label="LinkedIn"> LinkedIn</a> <a href="https://masayagh.com/en/" aria-label="Portfolio"
+                > Portfolio</a
+              >, or my 
               <a href="https://github.com/aminesayagh" aria-label="GitHub"
-                >GitHub</a
+                > GitHub</a
               >.
             </p>
           </div>
@@ -582,9 +624,9 @@
       </section>
       <section id="contributions">
         <h2 class="section-title">Contributions</h2>
-        <article>
+        <article id="experience-codewrangler" class="experience">
           <div>
-            <h3 class="job-title">Code Wrangler</h3>
+            <h3 class="experience-title">Code Wrangler</h3>
           </div>
           <div>
             <p class="section-content">
@@ -598,7 +640,7 @@
         </article>
         <article>
           <div>
-            <h3 class="job-title">NFT, Artist Sofiane PAMART</h3>
+            <h3 class="experience-title">NFT, Artist Sofiane PAMART</h3>
           </div>
           <div>
             <p class="section-content">
