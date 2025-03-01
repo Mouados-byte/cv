@@ -53,8 +53,14 @@
         --color-blue: #847af3;
         --color-blue_2: #ebeaf1;
 
-        --font-xl: 1.2rem;
+        --font-xl: 1.1rem;
         --font-xs: 0.8rem;
+
+        --space-xxl: 2rem;
+        --space-xl: 1.2rem;
+        --space-l: 0.8rem;
+        --space-m: 0.6rem;
+        --space-s: 0.4rem;
       }
 
       html {
@@ -93,8 +99,8 @@
         width: 100%;
         background-color: var(--color-blue_2);
         border: 0.5px solid var(--color-gray-border);
-        padding: 15px 15px;
-        margin: 12px 0;
+        padding: var(--space-l) var(--space-xl);
+        margin: var(--space-xl) 0 0 0;
         table-layout: fixed;
       }
 
@@ -103,11 +109,11 @@
       }
 
       address.contact-info .row div:nth-child(1) {
-        padding-right: 2rem;
+        padding-right: var(--space-xxl);
       }
 
       address.contact-info .row div:nth-child(3) {
-        padding-left: 2rem;
+        padding-left: var(--space-xxl);
       }
 
       address.contact-info div:not(.row) {
@@ -149,12 +155,90 @@
         font-size: var(--font-xs);
       }
 
+      main section {
+        margin-top: var(--space-xl);
+      }
+
+      .section-title {
+        display: flex;
+        align-items: flex-end;
+        font-size: var(--font-xl);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        line-height: 1;
+        width: 100%;
+      }
+
+      .section-title::after {
+        content: "";
+        flex-grow: 1;
+        height: 1px;
+        background-color: var(--color-gray-border);
+        margin-left: var(--space-m);
+        margin-bottom: var(--space-s);
+        display: inline-block;
+      }
+
+      .experiences article:not(:first-child), .section-title {
+        padding-top: var(--space-xl) !important;
+      }
+
+      .experiences
+        article
+        .experience-content
+        .section-content:not(:first-child) {
+        padding-top: var(--space-m);
+      }
+
+      .experience,
+      .skills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: no-wrap;
+      }
+
+      .experience .experience-summary,
+      .skills .skills-title {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .experience .experience-head {
+        display: inline-flex;
+        flex-direction: row;
+      }
+
+      .experience .experience-location {
+        padding-left: 2px;
+      }
+
+      .experience .experience-content,
+      .skills .skills-list {
+        flex: 1;
+      }
+
+      .experience-title,
+      .experience-location,
+      .experience-duration,
+      .skills-title {
+        font-size: var(--font-xs);
+        letter-spacing: 0.06em;
+      }
+
+      .experience .experience-title {
+        text-transform: capitalize;
+        font-weight: 600;
+      }
+
       .skills-list {
         list-style: none;
         padding: 0;
         margin: 0;
         display: inline;
       }
+
       .skills-list li {
         display: inline;
         font-size: var(--font-xs);
@@ -172,6 +256,8 @@
         @page {
           size: A4;
           margin: 10mm;
+          background-color: var(--color-white);
+          color: var(--color-black);
         }
 
         body {
@@ -179,6 +265,15 @@
           color: var(--color-black);
           margin: 0;
           padding: 20px;
+        }
+        
+        /* .section-title {
+          break-after: avoid;
+          page-break-after: avoid;
+        } */
+        
+        .section-title::after {
+          background-color: var(--color-gray-border) !important;
         }
 
         address.contact-info {
@@ -261,15 +356,17 @@
           environment.
         </p>
       </section>
-      <section id="experience">
+      <section id="experiences" class="experiences">
         <h2 class="section-title">Professional Experience</h2>
-        <article id="experience-ckm-ckp">
-          <div>
-            <h3 class="job-title">CKM Accelerator</h3>
-            <p>(Morocco)</p>
-            <p>Dec 2024 - Present - 3 mos</p>
+        <article id="experience-ckm-ckp" class="experience">
+          <div class="experience-summary">
+            <div class="experience-head">
+              <h3 class="experience-title">CKM CKP</h3>
+              <p class="experience-location">(Morocco)</p>
+            </div>
+            <p class="experience-duration">Dec 2024 - Present - 3 mos</p>
           </div>
-          <div>
+          <div class="experience-content">
             <p class="section-content">
               Developed and documented <strong>02Book SaaS</strong>, an
               <strong>AI-powered</strong> writing assistant, by optimizing user
@@ -280,13 +377,15 @@
             </p>
           </div>
         </article>
-        <article id="experience-richmedia">
-          <div>
-            <h3 class="job-title">Rich Media</h3>
-            <p>(Morocco)</p>
-            <p>Dec 2024 - Jun 2025 - 2 mos</p>
+        <article id="experience-richmedia" class="experience">
+          <div class="experience-summary">
+            <div class="experience-head">
+              <h3 class="experience-title">Rich Media</h3>
+              <p class="experience-location">(Morocco)</p>
+            </div>
+            <p class="experience-duration">Dec 2024 - Jun 2025 - 2 mos</p>
           </div>
-          <div>
+          <div class="experience-content">
             <p class="section-content">
               Contributed to <strong>Rich Media</strong>, an influencer
               marketplace, by parsing and serving
@@ -297,12 +396,14 @@
             </p>
           </div>
         </article>
-        <article id="experience-digital-consulting">
-          <div>
-            <h3 class="job-title">Digital Consulting</h3>
-            <p>July 2024 - Jun 2024 - 5 mos</p>
+        <article id="experience-digital-consulting" class="experience">
+          <div class="experience-summary">
+            <div class="experience-head">
+              <h3 class="experience-title">Digital Consulting</h3>
+            </div>
+            <p class="experience-duration">July 2024 - Jun 2024 - 5 mos</p>
           </div>
-          <div>
+          <div class="experience-content">
             <p class="section-content">
               Branded companies like <a>French D (Dubai)</a>,
               <a>Miratti (Morocco)</a>, Maud Diamond (Brazil), and
@@ -313,13 +414,15 @@
             </p>
           </div>
         </article>
-        <article id="experience-cybercohesion">
-          <div>
-            <h3 class="job-title">Cyber Cohesion</h3>
-            <p>(Singapore)</p>
-            <p>May 2023 - July 2024 - 15 mos</p>
+        <article id="experience-cybercohesion" class="experience">
+          <div class="experience-summary">
+            <div class="experience-head">
+              <h3 class="experience-title">Cyber Cohesion</h3>
+              <p class="experience-location">(Singapore)</p>
+            </div>
+            <p class="experience-duration">May 2023 - July 2024 - 15 mos</p>
           </div>
-          <div>
+          <div class="experience-content">
             <p class="section-content">
               Implemented a <strong>Golang RESTful API</strong> handling a
               <strong>Kubernetes controller-runtime</strong> for
@@ -339,13 +442,15 @@
             </p>
           </div>
         </article>
-        <article id="experience-jonas-agency">
-          <div>
-            <h3 class="job-title">Jonas Digital Agency</h3>
-            <p>(London)</p>
-            <p>July 2023 - Oct 2024 - 15 mos</p>
+        <article id="experience-jonas-agency" class="experience">
+          <div class="experience-summary">
+            <div class="experience-head">
+              <h3 class="experience-title">Jonas Digital Agency</h3>
+              <p class="experience-location">(London)</p>
+            </div>
+            <p class="experience-duration">July 2023 - Oct 2024 - 15 mos</p>
           </div>
-          <div>
+          <div class="experience-content">
             <p class="section-content">
               Rolled out an <strong>NGINX-based</strong> deployment pipeline on
               a <strong>VPS integrated</strong> with
@@ -361,9 +466,9 @@
             </p>
           </div>
         </article>
-        <article>
-          <div></div>
-          <div>
+        <article class="experience">
+          <div class="experience-summary"></div>
+          <div class="experience-content">
             <p class="section-content">
               For additional experience, or contribution, please review my
               <a
@@ -383,7 +488,7 @@
       </section>
       <section id="skills">
         <h2 class="section-title">Skills</h2>
-        <article>
+        <article class="skills">
           <h3 class="skills-title">Programming Languages</h3>
           <ul class="skills-list">
             <li>Javascript/Typescript</li>
@@ -394,7 +499,7 @@
             <li>Bash</li>
           </ul>
         </article>
-        <article>
+        <article class="skills">
           <h3 class="skills-title">Front-end/ Back-end</h3>
           <ul class="skills-list">
             <li>React/Next.js</li>
@@ -407,7 +512,7 @@
             <li>Nginx</li>
           </ul>
         </article>
-        <article>
+        <article class="skills">
           <h3 class="skills-title">Cloud Services</h3>
           <ul class="skills-list">
             <li>Google Cloud</li>
@@ -419,7 +524,7 @@
             <li>Vercel</li>
           </ul>
         </article>
-        <article>
+        <article class="skills">
           <h3 class="skills-title">Containerization and CI/CD</h3>
           <ul class="skills-list">
             <li>Docker</li>
@@ -429,7 +534,7 @@
             <li>Github Actions</li>
           </ul>
         </article>
-        <article>
+        <article class="skills">
           <h3 class="skills-title">Database</h3>
           <ul class="skills-list">
             <li>Firebase</li>
@@ -439,7 +544,7 @@
             <li>Redis</li>
           </ul>
         </article>
-        <article>
+        <article class="skills">
           <h3 class="skills-title">Testing Practice</h3>
           <ul class="skills-list">
             <li>Unit Testing (Jest)</li>
@@ -447,7 +552,7 @@
             <li>Integration Testing (Supertest)</li>
           </ul>
         </article>
-        <article>
+        <article class="skills">
           <h3 class="skills-title">Artificial Intelligence</h3>
           <ul class="skills-list">
             <li>Open AI</li>
@@ -462,7 +567,7 @@
             <li>n8n</li>
           </ul>
         </article>
-        <article>
+        <article class="skills">
           <h3 class="skills-title">Methodology and Standards</h3>
           <ul class="skills-list">
             <li>Agile</li>
