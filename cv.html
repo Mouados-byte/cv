@@ -56,9 +56,9 @@
         --font-xxl: 1.5rem;
         --font-xl: 1.1rem;
         --font-l: 1rem;
-        --font-xs: 0.8rem;
+        --font-xs: 0.9rem;
 
-        --line-height: 1.8;
+        --line-height: 1.9;
         --letter-spacing: 0.12em;
         --letter-spacing-2: 0.06em;
 
@@ -147,6 +147,8 @@
 
       a {
         color: var(--color-black) !important;
+        cursor: pointer;
+        font-size: var(--font-xs);
         text-decoration: none;
         font-weight: 400;
         line-height: var(--line-height);
@@ -206,12 +208,18 @@
         width: 100%;
         height: 1px;
         background-color: var(--color-gray-border);
-        margin: var(--space-l) 0;
+        margin: var(--space-xxl) 0;
       }
 
       .experiences article.experience:not(#experience-ckm-ckp),
-      .contributions article.experience:not(#experience-codewrangler) {
+      .contributions article.experience:not(#experience-codewrangler),
+      footer .row:nth-child(2)
+      {
         margin-top: var(--space-xl);
+      }
+
+      .education .section-content p:first-child {
+        margin-bottom: var(--space-m);
       }
 
       .experiences
@@ -329,13 +337,19 @@
         font-weight: var(--font-weight-bold);
         text-decoration: underline;
         line-height: var(--line-height);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
 
       /* Print media query */
       @media print {
+        :root {
+          background-color: var(--color-white);
+        }
         @page {
           size: A4;
-          margin: 10mm;
+          /* margin: 20mm; */
           background-color: var(--color-white);
           color: var(--color-black);
         }
@@ -344,7 +358,7 @@
           background-color: var(--color-white);
           color: var(--color-black);
           margin: 0;
-          padding: 20px;
+          padding: 40px;
         }
 
         .section-title {
@@ -720,7 +734,7 @@
       <div class="row">
         <section>
           <h3 class="section-title">REFERENCES</h3>
-          <div class="references-list">
+          <div class="section-content">
             <a
               href="https://drive.google.com/file/d/1UzBM7WzxPOZkD3ZYToU9FgHYsCCWzD4l/view?usp=drive_link"
               aria-label="Cyber Cohesion"
@@ -743,90 +757,96 @@
             >
           </div>
         </section>
-        <section>
+        <section id="education" class="education">
           <h3 class="section-title">EDUCATION</h3>
-          <p class="section-content">
-            <strong>Master’s in Big Data & Cloud Computing</strong> University of
-            Hassan II, Casablanca, 2023 - 2024
-          </p>
-          <p class="section-content">
-            <strong>Bachelor’s in Computer Science</strong> University of Hassan
-            II, Casablanca, 2020 - 2023
-          </p>
+          <div class="section-content">
+            <p class="">
+              <strong>Master’s in Big Data & Cloud Computing</strong> University of
+              Hassan II, Casablanca, 2023 - 2024
+            </p>
+            <p class="">
+              <strong>Bachelor’s in Computer Science</strong> University of Hassan
+              II, Casablanca, 2020 - 2023
+            </p>
+          </div>
         </section>
       </div>
       <div class="row">
-        <section>
-          <h3>LANGUAGES</h3>
-          <p>English, French, Arabic</p>
+        <section id="languages" class="languages">
+          <h3 class="section-title">LANGUAGES</h3>
+          <div class="section-content">
+            <p>English, French, Arabic</p>
+          </div>
         </section>
-        <section>
+        <section id="achievements" class="achievements">
           <h3 class="section-title">ACHIEVEMENTS</h3>
-          <ul class="skills-list">
-            <li>
-              <a
-                href="https://lavish.masayagh.com/"
-                aria-label="Lavish"
-                title="Lavish"
-                >Lavish</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://french-dandy.com/"
-                aria-label="French Dandy"
-                title="French Dandy"
-                >French D</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://happy-water.masayagh.com/"
-                aria-label="Happy Water"
-                title="Happy Water"
-                >Happy Water</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://greening-energy.com/"
-                aria-label="Greening Eg"
-                title="Greening Eg"
-                >Greening Eg</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://hordestudio.com/"
-                aria-label="Horde Studio"
-                title="Horde Studio"
-                >Horde S</a
-              >
-            </li>
-            <li>
-              <a href="https://cybercohesions.com/" aria-label="Cyber Cohesion"
-                >Cyber Cohesion</a
-              >
-            </li>
-            <li>
-              <a href="https://coreas-ht.com/" aria-label="Coreas">Coreas</a>
-            </li>
-            <li>
-              <a href="https://agrosem.masayagh.com/" aria-label="Agrosem"
-                >Agrosem</a
-              >
-            </li>
-            <li>
-              <a href="https://mirattibags.com/" aria-label="Miratti">Miratti</a>
-            </li>
-            <li>
-              <a
-                href="https://figma.com/design/ydOVsavgbcL6QwFJiyUuBO/Portfolio?m=auto&t=NP0EyAcVDHp6E6nb-1"
-                aria-label="Figma"
-                >Figma</a
-              >
-            </li>
-          </ul>
+          <div class="section-content">
+            <ul class="skills-list">
+              <li>
+                <a
+                  href="https://lavish.masayagh.com/"
+                  aria-label="Lavish"
+                  title="Lavish"
+                  >Lavish</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://french-dandy.com/"
+                  aria-label="French Dandy"
+                  title="French Dandy"
+                  >French D</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://happy-water.masayagh.com/"
+                  aria-label="Happy Water"
+                  title="Happy Water"
+                  >Happy Water</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://greening-energy.com/"
+                  aria-label="Greening Eg"
+                  title="Greening Eg"
+                  >Greening Eg</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://hordestudio.com/"
+                  aria-label="Horde Studio"
+                  title="Horde Studio"
+                  >Horde S</a
+                >
+              </li>
+              <li>
+                <a href="https://cybercohesions.com/" aria-label="Cyber Cohesion"
+                  >Cyber Cohesion</a
+                >
+              </li>
+              <li>
+                <a href="https://coreas-ht.com/" aria-label="Coreas">Coreas</a>
+              </li>
+              <li>
+                <a href="https://agrosem.masayagh.com/" aria-label="Agrosem"
+                  >Agrosem</a
+                >
+              </li>
+              <li>
+                <a href="https://mirattibags.com/" aria-label="Miratti">Miratti</a>
+              </li>
+              <li>
+                <a
+                  href="https://figma.com/design/ydOVsavgbcL6QwFJiyUuBO/Portfolio?m=auto&t=NP0EyAcVDHp6E6nb-1"
+                  aria-label="Figma"
+                  >Figma</a
+                >
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
     </footer>
