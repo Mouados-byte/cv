@@ -222,7 +222,8 @@
       }
 
       .experience,
-      .skills {
+      .skills,
+      .footer .row{
         display: flex;
         align-items: baseline; /* Change from 'start' to 'baseline' for text alignment */
         flex-direction: row;
@@ -234,7 +235,8 @@
       }
 
       .experience .experience-summary,
-      .skills .skills-title {
+      .skills .skills-title,
+      .footer .row section:nth-child(1) {
         width: 250px;
         display: flex;
         flex-direction: column;
@@ -714,113 +716,119 @@
       </section>
     </main>
     <hr class="divider" />
-    <footer>
-      <section>
-        <h3 class="section-title">REFERENCES</h3>
-        <a
-          href="https://drive.google.com/file/d/1UzBM7WzxPOZkD3ZYToU9FgHYsCCWzD4l/view?usp=drive_link"
-          aria-label="Cyber Cohesion"
-          >Cyber Cohesion</a
-        >,
-        <a
-          href="https://drive.google.com/file/d/143J6kJH4jtJcah4JIbW-_MP__a_24xAV/view?usp=drive_link"
-          aria-label="French Dandy"
-          >French Dandy</a
-        >,
-        <a
-          href="https://docs.google.com/document/d/1Ylvz8PNhcA5ZDxVRzLO0ivu6e3476z1t"
-          aria-label="Jonas Agency"
-          >Jonas Agency</a
-        >,
-        <a
-          href="https://drive.google.com/file/d/1Yw9G4V9ci6CJOFIElqGTghFU7WvIJkoA/view"
-          aria-label="Lavish Trading"
-          >Lavish Trading</a
-        >
-      </section>
-      <section>
-        <h3 class="section-title">EDUCATION</h3>
-        <p class="section-content">
-          <strong>Master’s in Big Data & Cloud Computing</strong> University of
-          Hassan II, Casablanca, 2023 - 2024
-        </p>
-        <p class="section-content">
-          <strong>Bachelor’s in Computer Science</strong> University of Hassan
-          II, Casablanca, 2020 - 2023
-        </p>
-      </section>
-      <section>
-        <h3>LANGUAGES</h3>
-        <p>English, French, Arabic</p>
-      </section>
-      <section>
-        <h3 class="section-title">ACHIEVEMENTS</h3>
-        <ul class="skills-list">
-          <li>
+    <footer class="footer">
+      <div class="row">
+        <section>
+          <h3 class="section-title">REFERENCES</h3>
+          <div class="references-list">
             <a
-              href="https://lavish.masayagh.com/"
-              aria-label="Lavish"
-              title="Lavish"
-              >Lavish</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://french-dandy.com/"
-              aria-label="French Dandy"
-              title="French Dandy"
-              >French D</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://happy-water.masayagh.com/"
-              aria-label="Happy Water"
-              title="Happy Water"
-              >Happy Water</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://greening-energy.com/"
-              aria-label="Greening Eg"
-              title="Greening Eg"
-              >Greening Eg</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://hordestudio.com/"
-              aria-label="Horde Studio"
-              title="Horde Studio"
-              >Horde S</a
-            >
-          </li>
-          <li>
-            <a href="https://cybercohesions.com/" aria-label="Cyber Cohesion"
+              href="https://drive.google.com/file/d/1UzBM7WzxPOZkD3ZYToU9FgHYsCCWzD4l/view?usp=drive_link"
+              aria-label="Cyber Cohesion"
               >Cyber Cohesion</a
-            >
-          </li>
-          <li>
-            <a href="https://coreas-ht.com/" aria-label="Coreas">Coreas</a>
-          </li>
-          <li>
-            <a href="https://agrosem.masayagh.com/" aria-label="Agrosem"
-              >Agrosem</a
-            >
-          </li>
-          <li>
-            <a href="https://mirattibags.com/" aria-label="Miratti">Miratti</a>
-          </li>
-          <li>
+            >,
             <a
-              href="https://figma.com/design/ydOVsavgbcL6QwFJiyUuBO/Portfolio?m=auto&t=NP0EyAcVDHp6E6nb-1"
-              aria-label="Figma"
-              >Figma</a
+              href="https://drive.google.com/file/d/143J6kJH4jtJcah4JIbW-_MP__a_24xAV/view?usp=drive_link"
+              aria-label="French Dandy"
+              >French Dandy</a
+            >,
+            <a
+              href="https://docs.google.com/document/d/1Ylvz8PNhcA5ZDxVRzLO0ivu6e3476z1t"
+              aria-label="Jonas Agency"
+              >Jonas Agency</a
+            >,
+            <a
+              href="https://drive.google.com/file/d/1Yw9G4V9ci6CJOFIElqGTghFU7WvIJkoA/view"
+              aria-label="Lavish Trading"
+              >Lavish Trading</a
             >
-          </li>
-        </ul>
-      </section>
+          </div>
+        </section>
+        <section>
+          <h3 class="section-title">EDUCATION</h3>
+          <p class="section-content">
+            <strong>Master’s in Big Data & Cloud Computing</strong> University of
+            Hassan II, Casablanca, 2023 - 2024
+          </p>
+          <p class="section-content">
+            <strong>Bachelor’s in Computer Science</strong> University of Hassan
+            II, Casablanca, 2020 - 2023
+          </p>
+        </section>
+      </div>
+      <div class="row">
+        <section>
+          <h3>LANGUAGES</h3>
+          <p>English, French, Arabic</p>
+        </section>
+        <section>
+          <h3 class="section-title">ACHIEVEMENTS</h3>
+          <ul class="skills-list">
+            <li>
+              <a
+                href="https://lavish.masayagh.com/"
+                aria-label="Lavish"
+                title="Lavish"
+                >Lavish</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://french-dandy.com/"
+                aria-label="French Dandy"
+                title="French Dandy"
+                >French D</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://happy-water.masayagh.com/"
+                aria-label="Happy Water"
+                title="Happy Water"
+                >Happy Water</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://greening-energy.com/"
+                aria-label="Greening Eg"
+                title="Greening Eg"
+                >Greening Eg</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://hordestudio.com/"
+                aria-label="Horde Studio"
+                title="Horde Studio"
+                >Horde S</a
+              >
+            </li>
+            <li>
+              <a href="https://cybercohesions.com/" aria-label="Cyber Cohesion"
+                >Cyber Cohesion</a
+              >
+            </li>
+            <li>
+              <a href="https://coreas-ht.com/" aria-label="Coreas">Coreas</a>
+            </li>
+            <li>
+              <a href="https://agrosem.masayagh.com/" aria-label="Agrosem"
+                >Agrosem</a
+              >
+            </li>
+            <li>
+              <a href="https://mirattibags.com/" aria-label="Miratti">Miratti</a>
+            </li>
+            <li>
+              <a
+                href="https://figma.com/design/ydOVsavgbcL6QwFJiyUuBO/Portfolio?m=auto&t=NP0EyAcVDHp6E6nb-1"
+                aria-label="Figma"
+                >Figma</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
     </footer>
   </body>
 </html>
