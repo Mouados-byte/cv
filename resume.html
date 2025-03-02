@@ -53,26 +53,32 @@
         --color-blue: #847af3;
         --color-blue_2: #ebeaf1;
 
-        --font-xxl: 1.5rem;
+        /* --font-xxl: 1.5rem;
         --font-xl: 1.1rem;
         --font-l: 1rem;
-        --font-xs: 0.9rem;
+        --font-xs: 0.9rem; */
+        --font-xxl: 1.1rem;
+        --font-xl: 0.8rem;
+        --font-l: 0.8rem;
+        --font-xs: 0.64rem;
 
-        --line-height: 1.9;
-        --letter-spacing: 0.12em;
+        /* --line-height: 1.9; */
+        --line-height: 1.6;
+        --letter-spacing: 0.08em;
         --letter-spacing-2: 0.06em;
 
-        --space-xxl: 2.2rem;
-        --space-xl: 1.2rem;
-        --space-l: 0.8rem;
-        --space-m: 0.6rem;
-        --space-s: 0.4rem;
+        --space-xxl: 1.8rem;
+        --space-xl: 0.5rem;
+        --space-l: 0.4rem;
+        --space-m: 0.34rem;
+        --space-s: 0.2rem;
         --space-xs: 0.16rem;
 
         --font-weight-extra-bold: 700;
         --font-weight-bold: 600;
         --font-weight-medium: 500;
 
+        --col-with: 190px;
       }
 
       html {
@@ -82,9 +88,9 @@
       body {
         font-family: "Montserrat", sans-serif;
         line-height: var(--line-height);
-        color: #333;
-        background-color: #f5f5f5;
-        margin: 0 0;
+        color: var(--color-gray);
+        background-color: var(--color-white);
+        margin: 0px;
         padding: 0px;
       }
       h1 {
@@ -256,7 +262,7 @@
       .experience .experience-summary,
       .skills .skills-title,
       .footer .row section:nth-child(1) {
-        width: 270px;
+        width: var(--col-with);
         display: flex;
         flex-direction: column;
         flex-shrink: 0;
@@ -334,9 +340,9 @@
         height: 100%;
         width: 100%;
         display: block;
-        border-left: 5px solid var(--color-blue);
+        border-left: 6px solid var(--color-blue);
         min-width: 100%;
-        padding: var(--space-l) var(--space-m);
+        padding: var(--space-l) var(--space-l);
       }
       .cta-links {
         display: inline;
@@ -365,22 +371,23 @@
         }
         @page {
           size: A4;
-          /* margin: 20mm; */
           background-color: var(--color-white);
           color: var(--color-black);
+          margin: 0;
+          padding: 24px;
+          border: none;
         }
 
         body {
           background-color: var(--color-white);
           color: var(--color-black);
           margin: 0;
-          padding: 40px;
         }
 
-        .section-title {
+        /* .section-title {
           break-after: avoid;
           page-break-after: avoid;
-        }
+        } */
 
         .section-title::after {
           background-color: var(--color-gray-border) !important;
@@ -412,16 +419,6 @@
           width: 33%;
           page-break-inside: avoid;
         }
-        .skills {
-          break-inside: avoid;
-          page-break-inside: avoid;
-        }
-
-        .skills .skills-title,
-        .skills .skills-list {
-          display: table-cell; /* Use table-cell for maximum print compatibility */
-          vertical-align: top;
-        }        
       }
     </style>
   </head>

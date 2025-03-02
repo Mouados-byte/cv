@@ -1,14 +1,16 @@
 #!/bin/bash
 
 # Check if wkhtmltopdf is installed
-if ! command -v wkhtmltopdf &> /dev/null
+if ! command -v weasyprint &> /dev/null
 then
     echo "Error: wkhtmltopdf is not installed."
     echo "Install it with:"
     echo "  Debian/Ubuntu: sudo apt install wkhtmltopdf"
     echo "  Fedora: sudo dnf install wkhtmltopdf"
     echo "  Arch: sudo pacman -S wkhtmltopdf"
-    exit 1
+    
+    # Run the installation script
+    
 fi
 
 # Input and output filenames
@@ -22,7 +24,7 @@ if [ ! -f "$INPUT_HTML" ]; then
 fi
 
 # Conversion command with formatting options
-wkhtmltopdf \
+weasyprint \
     --page-size A4 \
     --margin-top 0mm \
     --margin-bottom 0mm \
