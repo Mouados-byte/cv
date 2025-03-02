@@ -48,7 +48,7 @@
       :root {
         --color-black: #000000;
         --color-gray: #57565d;
-        --color-gray-border: #57565d80;
+        --color-gray-border: #57565d90;
         --color-white: #f2f2f2;
         --color-blue: #847af3;
         --color-blue_2: #ebeaf1;
@@ -62,16 +62,17 @@
         --letter-spacing: 0.12em;
         --letter-spacing-2: 0.06em;
 
-        --space-xxl: 2rem;
+        --space-xxl: 2.2rem;
         --space-xl: 1.2rem;
         --space-l: 0.8rem;
         --space-m: 0.6rem;
         --space-s: 0.4rem;
-        --space-xs: 0.3rem;
+        --space-xs: 0.16rem;
 
         --font-weight-extra-bold: 700;
         --font-weight-bold: 600;
         --font-weight-medium: 500;
+
       }
 
       html {
@@ -89,6 +90,7 @@
       h1 {
         text-align: center;
         font-size: var(--font-xxl);
+        letter-spacing: var(--letter-spacing);
       }
       h2.job-title {
         text-align: center;
@@ -104,7 +106,7 @@
         width: 100%;
         background-color: var(--color-blue_2);
         border: 0.5px solid var(--color-gray-border);
-        padding: var(--space-l) var(--space-xl);
+        padding: var(--space-xl) var(--space-xl);
         margin: var(--space-xl) 0 0 0;
         table-layout: fixed;
       }
@@ -168,6 +170,10 @@
         color: var(--color-blue);
       }
 
+      section p {
+        text-align: justify;
+      }
+
       strong {
         font-weight: 500;
         color: var(--color-black);
@@ -200,8 +206,10 @@
         height: 1px;
         background-color: var(--color-gray-border);
         margin-left: var(--space-m);
-        margin-bottom: var(--space-m);
+        margin-bottom: var(--space-l);
         display: inline-block;
+        opacity: 1 !important;
+        align-items: end;
       }
 
       .divider:not(.section-title) {
@@ -212,13 +220,12 @@
       }
 
       .experiences article.experience:not(#experience-ckm-ckp),
-      .contributions article.experience:not(#experience-codewrangler),
-      footer .row:nth-child(2)
+      footer > .row:nth-child(2)
       {
         margin-top: var(--space-xl);
       }
 
-      .education .section-content p:first-child {
+      .education .section-content p:first-of-type, .references .section-content .row:nth-child(1) {
         margin-bottom: var(--space-m);
       }
 
@@ -238,14 +245,18 @@
         flex-wrap: no-wrap;
       }
 
-      .skills {
+      .skills:not(#methodology-and-standards) {
         margin-bottom: var(--space-xs);
+      }
+
+      .contributions article.experience:not(#experience-piano-king) {
+        margin-bottom: var(--space-l);
       }
 
       .experience .experience-summary,
       .skills .skills-title,
       .footer .row section:nth-child(1) {
-        width: 250px;
+        width: 270px;
         display: flex;
         flex-direction: column;
         flex-shrink: 0;
@@ -338,8 +349,13 @@
         text-decoration: underline;
         line-height: var(--line-height);
         overflow: hidden;
+        display: inline;
         text-overflow: ellipsis;
         white-space: nowrap;
+      }
+
+      .references .section-content a {
+        padding: 0 0.2rem 0 0;
       }
 
       /* Print media query */
@@ -405,7 +421,7 @@
         .skills .skills-list {
           display: table-cell; /* Use table-cell for maximum print compatibility */
           vertical-align: top;
-        }
+        }        
       }
     </style>
   </head>
@@ -682,7 +698,7 @@
             <li>n8n</li>
           </ul>
         </article>
-        <article class="skills">
+        <article class="skills" id="methodology-and-standards">
           <h3 class="skills-title">Methodology and Standards</h3>
           <ul class="skills-list">
             <li>Agile</li>
@@ -732,29 +748,29 @@
     <hr class="divider" />
     <footer class="footer">
       <div class="row">
-        <section>
+        <section class="references" id="references">
           <h3 class="section-title">REFERENCES</h3>
           <div class="section-content">
-            <a
-              href="https://drive.google.com/file/d/1UzBM7WzxPOZkD3ZYToU9FgHYsCCWzD4l/view?usp=drive_link"
-              aria-label="Cyber Cohesion"
-              >Cyber Cohesion</a
-            >,
-            <a
-              href="https://drive.google.com/file/d/143J6kJH4jtJcah4JIbW-_MP__a_24xAV/view?usp=drive_link"
-              aria-label="French Dandy"
-              >French Dandy</a
-            >,
-            <a
-              href="https://docs.google.com/document/d/1Ylvz8PNhcA5ZDxVRzLO0ivu6e3476z1t"
-              aria-label="Jonas Agency"
-              >Jonas Agency</a
-            >,
-            <a
-              href="https://drive.google.com/file/d/1Yw9G4V9ci6CJOFIElqGTghFU7WvIJkoA/view"
-              aria-label="Lavish Trading"
-              >Lavish Trading</a
-            >
+            <div class="row">
+              <a
+                href="https://drive.google.com/file/d/1UzBM7WzxPOZkD3ZYToU9FgHYsCCWzD4l/view?usp=drive_link"
+                aria-label="Cyber Cohesion"
+                >Cyber Cohesion</a
+              > , <a href="https://drive.google.com/file/d/143J6kJH4jtJcah4JIbW-_MP__a_24xAV/view?usp=drive_link" aria-label="French Dandy">French Dandy</a
+              > ,
+            </div>
+            <div class="row">
+              <a
+                href="https://docs.google.com/document/d/1Ylvz8PNhcA5ZDxVRzLO0ivu6e3476z1t"
+                aria-label="Jonas Agency"
+                >Jonas Agency</a
+              > , 
+              <a
+                href="https://drive.google.com/file/d/1Yw9G4V9ci6CJOFIElqGTghFU7WvIJkoA/view"
+                aria-label="Lavish Trading"
+                >Lavish Trading</a
+              >
+            </div>
           </div>
         </section>
         <section id="education" class="education">
