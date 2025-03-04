@@ -30,6 +30,25 @@ def optimize_html_for_ats(html_content):
     # Add a special class to important content sections
     for section in soup.find_all('section'):
         section['data-ats-section'] = 'true'
+        if 'id' in section.attrs:
+            if 'summary' in section['id']:
+                section['role'] = 'region'
+                section['aria-label'] = 'Professional Summary'
+            elif 'experience' in section['id']:
+                section['role'] = 'region'
+                section['aria-label'] = 'Work Experience'
+            elif 'education' in section['id']:
+                section['role'] = 'region'
+                section['aria-label'] = 'Education'
+            elif 'skills' in section['id']:
+                section['role'] = 'region'
+                section['aria-label'] = 'Skills'
+            elif 'achievements' in section['id']:	
+                section['role'] = 'region'
+                section['aria-label'] = 'Achievements'
+            elif 'references' in section['id']:
+                section['role'] = 'region'
+                section['aria-label'] = "References"
     
     # Ensure lists are properly formatted
     for ul in soup.find_all('ul'):
@@ -50,25 +69,7 @@ def optimize_html_for_ats(html_content):
         meta_tag['content'] = meta_keywords.strip(', ')
         if soup.head:
             soup.head.append(meta_tag)
-    
-    # Add a special style for ATS optimization
-    style_tag = soup.new_tag('style')
-    style_tag.string = """
-        /* ATS Optimization Styles */
-        [data-ats-section] {
-            margin-bottom: 1em;
-        }
-        [data-ats-heading] {
-            font-weight: bold;
-            margin-bottom: 0.5em;
-        }
-        [data-ats-item] {
-            margin-bottom: 0.2em;
-        }
-    """
-    if soup.head:
-        soup.head.append(style_tag)
-    
+
     return str(soup)
 
 def convert_html_to_pdf(html_file, output_pdf=None, optimize_for_ats=True):
@@ -102,7 +103,10 @@ def convert_html_to_pdf(html_file, output_pdf=None, optimize_for_ats=True):
         if optimize_for_ats:
             html_content = optimize_html_for_ats(html_content)
         
-        # Configure fonts
+        # Create HTML object
+        html = HTML(string=html_content)
+        
+        # Configure font
         font_config = FontConfiguration()
         
         # Define custom CSS for better PDF rendering
@@ -114,49 +118,24 @@ def convert_html_to_pdf(html_file, output_pdf=None, optimize_for_ats=True):
                     content: "";
                 }
                 @bottom-center {
-                    content: counter(page);
+                    content: "";
                 }
             }
-            body {
-                font-size: 11pt;
-                line-height: 1.4;
-                font-family: "Helvetica", "Arial", sans-serif;
-            }
-            h1, h2, h3, h4, h5, h6 {
-                margin-top: 0.5em;
-                margin-bottom: 0.3em;
-                page-break-after: avoid;
-            }
-            section {
-                margin-bottom: 1em;
-                page-break-inside: avoid;
-            }
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                page-break-inside: auto;
-            }
-            tr {
-                page-break-inside: avoid;
-                page-break-after: auto;
-            }
-            /* Ensure print compatibility */
-            @media print {
-                a {
-                    color: black !important;
-                    text-decoration: none;
-                }
-                img, svg {
-                    max-width: 100% !important;
-                }
-            }
+            /* Rest of your CSS */
         ''', font_config=font_config)
+        # Add PDF metadata
+        meta_keywords = ""
         
-        # Create HTML object
-        html = HTML(string=html_content)
+        metadata = {
+            'Title': 'Mohamed Amine SAYAGH - Software Developer Resume',
+            'Author': 'Mohamed Amine SAYAGH',
+            'Subject': 'Professional Resume',
+            'Creator': 'ATS-Optimized Resume Generator'
+        }
+
         
         # Render PDF with custom CSS
-        html.write_pdf(output_pdf)
+        html.write_pdf(output_pdf, stylesheets=[custom_css], metadata=metadata)
         
         print(f"PDF successfully created at: {output_pdf}")
         return output_pdf
