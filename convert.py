@@ -112,7 +112,7 @@ def convert_html_to_pdf(html_file, output_pdf=None, optimize_for_ats=True):
         # Define custom CSS for better PDF rendering
         custom_css = CSS(string='''
             @page {
-                margin: 1cm;
+                margin: 1.2cm 1cm;
                 size: letter;
                 @top-center {
                     content: "";
@@ -146,9 +146,9 @@ def convert_html_to_pdf(html_file, output_pdf=None, optimize_for_ats=True):
 
 def main():
     parser = argparse.ArgumentParser(description='Convert HTML file to ATS-friendly PDF')
-    parser.add_argument('html_file', help='Path to the HTML file')
-    parser.add_argument('-o', '--output', help='Path to save the PDF file')
-    parser.add_argument('--no-optimize', action='store_true', help='Disable ATS optimization')
+    parser.add_argument('html_file', help='Path to the HTML file', default='resume.html')
+    parser.add_argument('-o', '--output', help='Path to save the PDF file', default='resume.pdf')
+    parser.add_argument('--no-optimize', action='store_true', help='Disable ATS optimization', default=True)
     
     args = parser.parse_args()
     

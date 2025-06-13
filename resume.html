@@ -67,7 +67,7 @@
           "Impact",
           "SaaS",
           "Branding",
-          "Cloud Computing",
+          "Cloud Computing"
         ]
       }
     </script>
@@ -91,15 +91,15 @@
         --font-xxl: 1.1rem;
         --font-xl: 0.88rem;
         --font-l: 0.7rem;
-        --font-xs: 0.62rem;
+        --font-xs: 0.66rem;
 
         --line-height: 1.78;
         --line-height-xs: 1.5;
         --letter-spacing: 0.08em;
         --letter-spacing-2: 0.02em;
 
-        --space-xxl: 1rem;
-        --space-xl: 0.5rem;
+        --space-xxl: 1.2rem;
+        --space-xl: 0.6rem;
         --space-l: 0.4rem;
         --space-m: 0.34rem;
         --space-s: 0.2rem;
@@ -115,6 +115,7 @@
       html {
         padding: 0;
         margin: 0;
+        height: 100%;
       }
       body {
         font-family: "Montserrat", sans-serif;
@@ -162,7 +163,7 @@
         background-color: var(--color-blue_2);
         border: 0.5px solid var(--color-gray-border);
         padding: 0.7rem var(--space-xxl);
-        margin: var(--space-l) 0 0 0;
+        margin: var(--space-xl) 0 0 0;
         table-layout: fixed;
       }
 
@@ -241,7 +242,8 @@
         color: var(--color-blue);
       }
 
-      section p, section li {
+      section p,
+      section li {
         text-align: justify;
       }
 
@@ -296,7 +298,7 @@
         flex-grow: 1;
         height: 1px;
         background-color: var(--color-gray-border);
-        margin-left: var(--space-m);
+        margin-left: var(--space-l);
         margin-bottom: var(--space-l);
         display: inline-block;
         opacity: 1 !important;
@@ -345,7 +347,7 @@
       }
 
       .skills:not(#methodology-and-standards) {
-        margin-bottom: var(--space-xs);
+        margin-bottom: var(--space-m);
       }
 
       .experience .experience-summary,
@@ -359,9 +361,9 @@
       }
 
       .skills .skills-list {
-        flex: 1; /* Take remaining width */
-        padding-top: 0; /* Remove any top padding */
-        margin-top: 0; /* Remove any top margin */
+        flex: 1;
+        padding-top: 0;
+        margin-top: 0;
       }
       .skills .skills-list li {
         line-height: var(--line-height-xs);
@@ -394,6 +396,15 @@
         text-transform: capitalize;
       }
 
+      .experience-duration {
+        margin-top: -0.2rem;
+      }
+
+      .experience-duration {
+        color: var(--color-gray);
+        font-weight: var(--font-weight-medium);
+      }
+
       .contributions a {
         color: var(--color-black);
       }
@@ -416,7 +427,7 @@
         font-size: var(--font-xs);
         line-height: var(--line-height-xs);
         color: var(--color-gray);
-        margin-right: 0.05rem;
+        margin-right: 0.02rem;
       }
       .skills-list li::after {
         content: ", ";
@@ -468,7 +479,7 @@
       }
 
       .references .section-content .row a:not(:first-child) {
-        margin-left: 0.24rem;
+        margin-left: 0.06rem;
       }
 
       .references .section-content a,
@@ -528,7 +539,7 @@
   <body>
     <header>
       <h1>Mohamed Amine SAYAGH</h1>
-      <h2 class="job-title">Software Developer</h2>
+      <h2 class="job-title">Business Application Developer</h2>
       <address class="contact-info">
         <div class="row">
           <div>
@@ -579,11 +590,10 @@
           <div class="title-divider"></div>
         </div>
         <p class="section-content">
-          <strong>Software developer</strong> with a proven record of delivered
-          over <strong>16 paid international projects</strong>, Recognized for
-          aligning solutions with genuine <strong>client needs</strong>, and
-          actively contributing to <strong>open source</strong> initiatives, now
-          preparing to apply these experiences within a corporate environment.
+          <strong>Software developer</strong>, combining practical coding
+          skills with a design foundation that helps me craft digital
+          experiences, Aiming to apply this blend to long-term, large-scale
+          projects and develop as a <strong>business application developer</strong>.
         </p>
       </section>
       <section id="experiences" class="experiences">
@@ -594,14 +604,23 @@
         <article id="experience-ckm-ckp" class="experience">
           <div class="experience-summary">
             <div class="experience-head">
-              <h3 class="experience-title">CKM CKP</h3>
+              <h3 class="experience-title">Tardigrade</h3>
               <p class="experience-location">(Morocco)</p>
             </div>
-            <p class="experience-duration">Dec 2024 - Present - 3 mos</p>
+            <p class="experience-duration">Nov 2024 - Jun 2025 - 8 mos</p>
           </div>
           <ul class="experience-content">
             <li class="section-content">
-              Engineered <strong>02Book SaaS</strong>, an <strong>AI</strong> writing assistant, delivered on a<strong>Azure CI/CD pipeline</strong>, boosting productivity for <strong>9,000+ B2C users</strong> and supported <strong>B2B clients</strong> like <strong>ORANGE</strong> and<strong>LE MATIN</strong>. all within <strong>Agile coached team.</strong>
+              Trained internally on multiple parts of a software delivery, such
+              as Odoo for the business management, internal
+              software-architecture standards, the .NET ecosystem for software
+              development, 1PMP for marketing, and UX Magic for design, by
+              iterating through mentored agile sprints.
+            </li>
+            <li class="section-content">
+              Developed 02Book SaaS, an AI-powered writing assistant for book
+              creation, by implementing a CI/CD delivery pipeline and supporting
+              B2B clients such as Orange and Le Matin.
             </li>
           </ul>
         </article>
@@ -615,7 +634,10 @@
           </div>
           <ul class="experience-content">
             <li class="section-content">
-              Contributed to <strong>Rich Media</strong>, an influencer marketplace, by parsing and serving <strong>real-time AI reporting data</strong> for <strong>100,000+</strong> influencers on a rich interface, enhancing <strong>business decision-making</strong> for professional cooperation.
+              Contributed to the development of a real-time reporting for
+              Inflauditor, an influencer marketplace, by streaming data on 100
+              000+ creators, enabling partner brands to fast-track campaign
+              decisions
             </li>
           </ul>
         </article>
@@ -628,18 +650,11 @@
           </div>
           <ul class="experience-content">
             <li class="section-content">
-              Branded companies like
-              <a href="https://french-dandy.com/">French D (Dubai)</a>,
-              <a href="https://mirattibags.com/">Miratti (Morocco)</a>, Maud
-              Diamond (Brazil), and
-              <a href="https://hordestudio.com/">Horde Studio (USA)</a>, by
-              applying <strong>Agile practices</strong> and web
-              <strong>development techniques</strong>, showcasing their
-              portfolio in events like
-              <a
-                href="https://www.instagram.com/forbesmiddleeast/p/DBcEJftoZI5/?img_index=8"
-                >Forbes ME</a
-              >.
+              Built lead-capture web experiences for luxury brands Miratti
+              (Morocco),
+              <a href="https://french-dandy.com/">French D</a> (Dubai), and
+              <a href="https://hordestudio.com/">Horde Studio</a> (USA),
+              showcased in multiple events like Forbes Middle East.
             </li>
           </ul>
         </article>
@@ -653,65 +668,36 @@
           </div>
           <ul class="experience-content">
             <li class="section-content">
-              Programmed a <strong>Golang RESTful API</strong> handling a
-              <strong>Kubernetes controller-runtime</strong> for
-              <strong>infrastructure applications</strong> that meet security
-              requirements, resulting in improved
-              <strong>role-based isolation</strong> and automated the
-              <strong>deployments.</strong>
+              Programmed a <strong>Golang RESTful API</strong> handling the
+              containerization for infrastructure applications with high
+              security controls, enabling role-based isolated instances to
+              launch in 1.2 seconds per user.
             </li>
             <li class="section-content">
-              Orchestrated the development of a <strong>CTF platform</strong> that unified our team's practices in a
-              <strong>zero-trust</strong> environment,
-              enabling the hosting of global events including
-              <strong>OWASP AppSec Days</strong>,
-              <strong>BSides Singapore</strong>, and <strong>ISACA</strong>.
+              Orchestrated a zero-trust CTF-platform by standardizing team
+              practices, hosting global events like OWASP AppSec Days, BSides
+              Singapore, and ISACA.
             </li>
           </ul>
         </article>
         <article id="experience-jonas-agency" class="experience">
           <div class="experience-summary">
             <div class="experience-head">
-              <h3 class="experience-title">Jonas Digital Agency</h3>
+              <h3 class="experience-title">Jonas Agency</h3>
               <p class="experience-location">(London)</p>
             </div>
             <p class="experience-duration">July 2023 - Oct 2024 - 15 mos</p>
           </div>
           <ul class="experience-content">
             <li class="section-content">
-              Rolled out an <strong>NGINX-based</strong> deployment pipeline on
-              a <strong>VPS integrated</strong> with
-              <string>CI/CD workflows</string>, reducing onboarding time and
-              enabling faster deployment of new web applications from starter
-              templates.
+              Rolled out an NGINX-based deployment pipeline on a VPS hosting
+              plan, automating new web-service launches from blueprint templates
+              and shortening release cycles.
             </li>
             <li class="section-content">
-              Resolved critical <strong>API integration issues</strong> in
-              store management that halted project progress, by collaborating
-              with tech suppliers, enabling the completion of
-              <strong>seven full-stack web</strong> onboarding projects.
+              Built seven full-stack web onboarding flows by partnering closely with an international client across time zones, accelerating new-user activation.
             </li>
           </ul>
-        </article>
-        <article id="experience-additional-experience" class="experience">
-          <div class="experience-summary"></div>
-          <div class="experience-content">
-            <p class="section-content cta-links">
-              For additional experience, or contribution, please review my
-              <a
-                href="https://www.linkedin.com/in/mohamedamine-sayagh/"
-                aria-label="LinkedIn"
-              >
-                LinkedIn</a
-              >,
-              <a href="https://masayagh.com/en/" aria-label="Portfolio">
-                Portfolio</a
-              >, or my
-              <a href="https://github.com/aminesayagh" aria-label="GitHub">
-                GitHub</a
-              >.
-            </p>
-          </div>
         </article>
       </section>
       <section id="skills">
@@ -724,8 +710,8 @@
           <ul class="skills-list">
             <li>Javascript/Typescript</li>
             <li>PHP</li>
+            <li>C#</li>
             <li>Golang</li>
-            <li>SQL</li>
             <li>Python</li>
             <li>Bash</li>
           </ul>
@@ -734,12 +720,12 @@
           <h3 class="skills-title">Front-end/ Back-end</h3>
           <ul class="skills-list">
             <li>React/Next.js</li>
+            <li>Blazor</li>
             <li>Express</li>
+            <li>Bundler: Webpack...</li>
+            <li>CMS: Wordpress...</li>
             <li>Nuxt.js</li>
-            <li>Bundler: Webpack, Vite</li>
-            <li>CMS: Wordpress, Strapi</li>
             <li>Pnpm Monorepo</li>
-            <li>Symfony</li>
             <li>Nginx</li>
           </ul>
         </article>
@@ -747,12 +733,11 @@
           <h3 class="skills-title">Cloud Services</h3>
           <ul class="skills-list">
             <li>Google Cloud</li>
-            <li>Azure</li>
-            <li>Oracle Cloud</li>
+            <li>Azure DevOps</li>
             <li>Github Codespace</li>
+            <li>Vercel</li>
             <li>Cloudflare</li>
             <li>Heroku</li>
-            <li>Vercel</li>
           </ul>
         </article>
         <article class="skills" id="containerization-and-ci-cd">
@@ -768,10 +753,10 @@
         <article class="skills" id="database">
           <h3 class="skills-title">Database</h3>
           <ul class="skills-list">
-            <li>Firebase</li>
-            <li>MySQL</li>
             <li>MongoDB</li>
+            <li>MySQL</li>
             <li>PostgreSQL</li>
+            <li>Firebase</li>
             <li>Redis</li>
           </ul>
         </article>
@@ -786,19 +771,20 @@
         <article class="skills" id="artificial-intelligence">
           <h3 class="skills-title">Artificial Intelligence</h3>
           <ul class="skills-list">
-            <li>Open AI</li>
-            <li>Claude 3.5</li>
+            <li>OpenAI API</li>
+            <li>Claude</li>
             <li>Cursor</li>
             <li>Copilot</li>
             <li>DeepSeek</li>
+            <li>MCP Agents</li>
             <li>RAG</li>
             <li>LangChain</li>
             <li>qDrant</li>
-            <li>ollama</li>
+            <li>Ollama</li>
             <li>n8n</li>
           </ul>
         </article>
-        <article class="skills" id="methodology-and-standards" >
+        <article class="skills" id="methodology-and-standards">
           <h3 class="skills-title">Methodology and Standards</h3>
           <ul class="skills-list">
             <li>Agile</li>
@@ -806,45 +792,9 @@
             <li>Kanban</li>
             <li>Design Pattern</li>
             <li>Refactoring</li>
-            <li>Clean Code</li>
-            <li>Distributed Architecture</li>
+            <li>The Standard of Hassan Habib</li>
+            <li>UX Magic</li>
           </ul>
-        </article>
-      </section>
-      <section id="contributions" class="contributions">
-        <div class="section-title-container">
-          <h2 class="section-title">Contributions</h2>
-          <div class="title-divider"></div>
-        </div>
-        <article id="experience-codewrangler" class="experience">
-          <div class="experience-summary">
-            <h3 class="experience-title">Code Wrangler: Open Source</h3>
-          </div>
-          <div class="experience-content">
-            <p class="section-content">
-              Automated structured knowledge base documentation from code
-              repositories,
-              <a
-                href="https://www.codewrangler.ai/en"
-                aria-label="Code Wrangler"
-                >View Project</a
-              >.
-            </p>
-          </div>
-        </article>
-        <article id="experience-piano-king" class="experience">
-          <div class="experience-summary">
-            <h3 class="experience-title">NFT, Artist Sofiane PAMART</h3>
-          </div>
-          <div class="experience-content">
-            <p class="section-content">
-              Collaborated as a developer in a 140 member team to deliver visual
-              NFTs intended for fundraising,
-              <a href="https://piano-king.com/" aria-label="Piano King"
-                >View Project</a
-              >.
-            </p>
-          </div>
         </article>
       </section>
     </main>
@@ -866,7 +816,7 @@
               <a
                 href="https://drive.google.com/file/d/143J6kJH4jtJcah4JIbW-_MP__a_24xAV/view?usp=drive_link"
                 aria-label="French Dandy"
-                >French Dandy</a
+                >French D</a
               >
               ,
             </div>
@@ -891,12 +841,10 @@
           </div>
           <div class="section-content">
             <p class="" id="">
-              <strong>Master’s in Big Data & Cloud Computing</strong> University
-              of Hassan II, Casablanca, 2023 - 2024
+              <strong>Master’s in Big Data & Cloud Computing</strong> University of Hassan II, Casablanca, 2023 - 202
             </p>
             <p class="">
-              <strong>Bachelor’s in Computer Science</strong> University of
-              Hassan II, Casablanca, 2020 - 2023
+              <strong>Bachelor’s in Computer Science</strong> University of Hassan II, Casablanca, 2020 - 2023
             </p>
           </div>
         </section>
@@ -937,7 +885,7 @@
                   href="https://happy-water.masayagh.com/"
                   aria-label="Happy Water"
                   title="Happy Water"
-                  >Happy Water</a
+                  >Happy W</a
                 >
               </li>
               <li>
