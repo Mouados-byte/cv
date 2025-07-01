@@ -1,936 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Professional CV of Mohamed Amine SAYAGH - Software Developer"
-    />
-    <meta
-      name="keywords"
-      content="Software Developer, Full Stack Developer, Web Development, Morocco, Casablanca, React, Node.js, JavaScript, TypeScript, SaaS, Impact, Branding, CI/CD, Docker, Modern JavaScript Development, Cloud Computing, Cloud Architecture"
-    />
-    <title>Mohamed Amine SAYAGH - Software Developer</title>
-    <meta name="author" content="Mohamed Amine SAYAGH" />
-    <meta
-      property="og:title"
-      content="Mohamed Amine SAYAGH - Software Developer"
-    />
-    <meta
-      property="og:description"
-      content="Mohamed Amine SAYAGH - Software Developer - Full Stack Developer - Web Development"
-    />
-    <meta
-      name="job-titles"
-      content="Software Developer, Full Stack Developer, Backend Developer, Frontend Developer, Software Engineer, Web Developer"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://masayagh.com/en/" />
-    <meta
-      property="og:image"
-      content="https://www.masayagh.com/mohamed_amine_sayagh.jpg"
-    />
-    <!-- font load montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="canonical" href="https://masayagh.com/en/" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org/",
-        "@type": "Person",
-        "name": "Mohamed Amine SAYAGH",
-        "jobTitle": "Software Developer",
-        "url": "https://masayagh.com/en/",
-        "sameAs": [
-          "https://linkedin.com/in/mohamedamine-sayagh",
-          "https://github.com/aminesayagh"
-        ],
-        "knowsAbout": [
-          "JavaScript",
-          "TypeScript",
-          "React",
-          "Docker",
-          "Kubernetes",
-          "CI/CD",
-          "Node.js",
-          "Express.js",
-          "MongoDB",
-          "MySQL",
-          "PostgreSQL",
-          "GraphQL",
-          "REST API",
-          "Impact",
-          "SaaS",
-          "Branding",
-          "Cloud Computing"
-        ]
-      }
-    </script>
-    <style>
-      /* Base styles and reset */
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      :root {
-        --color-black: #000000;
-        --color-gray: #626267;
-        --color-gray-border: #85838d;
-        --color-white: #f2f2f2;
-        --color-blue: #847af3;
-        --color-blue_2: #ebeaf1;
 
-        --font-xxl: 1.1rem;
-        --font-xl: 0.88rem;
-        --font-l: 0.7rem;
-        --font-xs: 0.64rem;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouad Imam - Software Developer</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.4;
+      color: #000;
+      background-color: #fff;
+    }
 
-        --line-height: 1.78;
-        --line-height-xs: 1.5;
-        --letter-spacing: 0.08em;
-        --letter-spacing-2: 0.02em;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
 
-        --space-xxl: 1.2rem;
-        --space-xl: 0.64rem;
-        --space-l: 0.4rem;
-        --space-m: 0.34rem;
-        --space-s: 0.2rem;
-        --space-xs: 0.16rem;
+    .header-left {
+      flex: 1;
+    }
 
-        --font-weight-extra-bold: 700;
-        --font-weight-bold: 600;
-        --font-weight-medium: 500;
+    .name {
+      font-size: 32px;
+      font-weight: bolder;
+    }
 
-        --col-with: 175px;
-      }
+    .contact-info {
+      font-size: 12px;
+      margin-bottom: 12px;
+      text-decoration: none;
+    }
 
-      html {
-        padding: 0;
-        margin: 0;
-        height: 100%;
-      }
-      body {
-        font-family: "Montserrat", sans-serif;
-        color: var(--color-gray);
-        background-color: var(--color-white);
-        font-weight: var(--font-weight-medium);
-        margin: 0px;
-        padding: 0px;
-      }
-      h1,
-      h2,
-      h3,
-      h4 {
-        line-height: var(--line-height-xs);
-      }
-      p {
-        line-height: var(--line-height);
-      }
-      #experiences li {
-        line-height: var(--line-height);
-        color: var(--color-gray);
-        list-style: none;
-      }
-      li {
-        font-weight: var(--font-weight-medium);
-      }
-      h1 {
-        text-align: center;
-        font-size: var(--font-xxl);
-        line-height: var(--line-height);
-        letter-spacing: var(--letter-spacing);
-      }
-      h2.job-title {
-        text-align: center;
-        font-size: var(--font-l);
-        text-transform: uppercase;
-        letter-spacing: 0.13em;
-        font-weight: var(--font-weight-medium);
-      }
+    .qr-code {
+      width: 80px;
+      height: 80px;
+    }
 
-      /* Style Address */
-      address.contact-info {
-        display: table;
-        width: 100%;
-        background-color: var(--color-blue_2);
-        border: 0.5px solid var(--color-gray-border);
-        padding: 0.7rem var(--space-xxl);
-        margin: var(--space-xl) 0 0 0;
-        table-layout: fixed;
-      }
+    .summary {
+      font-size: 11px;
+      text-align: justify;
+      margin-bottom: 16px;
+      padding: 0 5px;
+    }
 
-      address.contact-info .row {
-        display: table-row;
-      }
+    .section-title {
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      margin: 20px 0 12px 0;
+      border-bottom: 1px solid #000;
+      padding-bottom: 2px;
+    }
 
-      address.contact-info .row div:nth-child(1) {
-        padding-right: var(--space-xxl);
-      }
+    .experience-item,
+    .project-item,
+    .education-item {
+      margin-bottom: 14px;
+    }
 
-      address.contact-info .row div:nth-child(3) {
-        padding-left: var(--space-xxl);
-      }
+    .company-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 4px;
+    }
 
-      address.contact-info div:not(.row) {
-        display: table-cell;
-        width: 33.33%;
-        font-size: var(--font-xs);
-        vertical-align: middle;
-        color: var(--color-gray);
-        position: relative;
-      }
+    .company-name {
+      font-weight: bold;
+      font-size: 12px;
+    }
 
-      address.contact-info span {
-        line-height: var(--line-height-xs);
-        letter-spacing: var(--letter-spacing-2);
-        font-weight: var(--font-weight-medium);
-        color: var(--color-gray);
-      }
+    .location-date {
+      font-size: 11px;
+      text-align: right;
+    }
 
-      address.contact-info a,
-      address.contact-info p {
-        float: right;
-        text-align: right;
-        color: var(--color-black);
-        font-weight: var(--font-weight-medium);
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        line-height: var(
-          --line-height-xs
-        ); /* Make sure both use the same line height */
-        margin: 0; /* Remove any default margins */
-        padding: 0; /* Remove any default padding */
-        vertical-align: middle; /* Ensure consistent vertical alignment */
-      }
+    .position {
+      font-style: italic;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
 
-      address.contact-info a {
-        text-decoration: underline;
-      }
-      address.contact-info p {
-        text-decoration: none;
-      }
+    .achievements {
+      font-size: 11px;
+      margin-left: 0;
+      padding-left: 0;
+    }
 
-      a {
-        color: var(--color-black) !important;
-        cursor: pointer;
-        font-size: var(--font-xs);
-        text-decoration: none;
-        font-weight: var(--font-weight-medium);
-        line-height: var(--line-height-xs);
-        overflow: hidden;
-        text-decoration: underline;
-        text-align: right;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
+    .achievements li {
+      margin-bottom: 4px;
+      list-style-type: disc;
+      margin-left: 16px;
+    }
 
-      a:hover {
-        color: var(--color-blue);
-        text-decoration: underline;
-      }
+    .project-name {
+      font-weight: bold;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
 
-      a:selected {
-        color: var(--color-blue);
-      }
+    .skills-section {
+      font-size: 11px;
+      text-align: center;
+      margin: 14px 0;
+    }
 
-      section p,
-      section li {
-        text-align: justify;
-      }
+    .education-degree {
+      font-style: italic;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
 
-      section strong,
-      section a {
-        font-weight: var(--font-weight-medium) !important;
-        color: var(--color-black);
-      }
+    .education-details {
+      font-size: 11px;
+    }
+  </style>
+</head>
 
-      .title-divider {
-        flex-grow: 1;
-        height: 1px;
-        border: var(--color-gray-border) 1px solid;
-        /* margin-bottom: var(--space-l); */
-      }
+<body>
+  <div class="header">
+    <div class="header-left">
+      <div class="name">MOUAD IMAM</div>
+      <div class="contact-info">Email: imam6mouad@gmail.com</div>
+    </div>
+    <img src="qr.png" alt="QR Code" class="qr-code">
+  </div>
 
-      /* Style sections */
-      .section-content {
-        font-size: var(--font-xs);
-        color: var(--color-gray);
-      }
+  <div class="summary">
+    Full-stack software engineer with 2+ years building scalable web applications and healthcare systems. Experienced in collaborating with cross-functional teams, implementing CI/CD pipelines, and delivering solutions that serve 5000+ daily users across multiple industries.
+  </div>
 
-      main section {
-        margin-top: var(--space-xxl);
-      }
+  <div class="section-title">Experience</div>
 
-      .section-title-container {
-        display: flex;
-        align-items: flex-end;
-        width: 100%;
-        margin-bottom: var(--space-xl);
-      }
-
-      .section-title {
-        font-size: var(--font-xl);
-        text-transform: uppercase;
-        letter-spacing: var(--letter-spacing);
-        font-weight: var(--font-weight-extra-bold);
-        margin-right: var(--space-m);
-        white-space: nowrap;
-      }
-
-      .title-divider {
-        flex-grow: 1;
-        border-top: var(--color-gray-border) 0.1px solid;
-        opacity: 0.5;
-        margin-bottom: var(--space-l);
-      }
-
-      .section-title.divider::after {
-        content: "";
-        flex-grow: 1;
-        height: 1px;
-        background-color: var(--color-gray-border);
-        margin-left: var(--space-l);
-        margin-bottom: var(--space-l);
-        display: inline-block;
-        opacity: 1 !important;
-        align-items: end;
-      }
-
-      .divider:not(.section-title) {
-        width: 100%;
-        height: 0.1px;
-        border: 0.5px solid var(--color-gray-border);
-        opacity: 0.5;
-        margin: var(--space-xxl) 0;
-      }
-
-      .experiences article.experience:not(#experience-ckm-ckp) {
-        margin-top: var(--space-xl);
-      }
-
-      footer > .row:nth-child(2) {
-        margin-top: 0.8rem;
-      }
-
-      .education .section-content p:first-of-type,
-      .references .section-content .row:nth-child(1) {
-        margin-bottom: var(--space-m);
-      }
-
-      .experiences
-        article
-        .experience-content
-        .section-content:not(:first-child) {
-        padding-top: var(--space-m);
-      }
-
-      .experience,
-      .skills,
-      .footer .row {
-        display: flex;
-        align-items: baseline; /* Change from 'start' to 'baseline' for text alignment */
-        flex-direction: row;
-        flex-wrap: no-wrap;
-      }
-
-      .contributions article.experience:not(#experience-piano-king) {
-        margin-bottom: var(--space-l);
-      }
-
-      .skills:not(#methodology-and-standards) {
-        margin-bottom: var(--space-m);
-      }
-
-      .experience .experience-summary,
-      .skills .skills-title,
-      .footer .row section:nth-child(1) {
-        width: var(--col-with);
-        display: flex;
-        flex-direction: column;
-        flex-shrink: 0;
-        margin: 0;
-      }
-
-      .skills .skills-list {
-        flex: 1;
-        padding-top: 0;
-        margin-top: 0;
-      }
-      .skills .skills-list li {
-        line-height: var(--line-height-xs);
-        padding: 0;
-        margin: 0;
-      }
-
-      .experience .experience-head {
-        display: inline-flex;
-        flex-direction: row;
-        margin-bottom: var(--space-s);
-      }
-
-      .experience .experience-location {
-        padding-left: 2px;
-      }
-
-      .experience .experience-content,
-      .skills .skills-list {
-        flex: 1;
-      }
-
-      .experience-title,
-      .experience-location,
-      .experience-duration,
-      .skills-title {
-        font-size: var(--font-xs);
-        line-height: var(--line-height-xs);
-        letter-spacing: var(--letter-spacing-2);
-        text-transform: capitalize;
-      }
-
-      .experience-duration {
-        margin-top: -0.2rem;
-      }
-
-      .experience-duration {
-        color: var(--color-gray);
-        font-weight: var(--font-weight-medium);
-      }
-
-      .contributions a {
-        color: var(--color-black);
-      }
-
-      .experience .experience-title,
-      .skills-title {
-        text-transform: capitalize;
-        font-weight: var(--font-weight-bold);
-      }
-
-      .skills-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: inline;
-      }
-
-      .skills-list li {
-        display: inline;
-        font-size: var(--font-xs);
-        line-height: var(--line-height-xs);
-        color: var(--color-gray);
-        margin-right: 0.02rem;
-      }
-      .skills-list li::after {
-        content: ", ";
-        line-height: var(--line-height-xs);
-      }
-      .skills-list li:last-child::after {
-        content: "";
-        line-height: var(--line-height-xs);
-      }
-
-      /* Style for call-to-action links section */
-      .experience-content {
-        width: 100%;
-      }
-
-      #experience-additional-experience .experience-content {
-        background-color: var(--color-blue_2);
-        height: 100%;
-        width: 100%;
-        display: block;
-        border-left: 4px solid var(--color-blue);
-        padding: var(--space-l) var(--space-l) var(--space-xl) var(--space-xl);
-        margin-top: var(--space-xl);
-      }
-      .cta-links {
-        display: inline;
-      }
-
-      .cta-links a,
-      .section-content a {
-        color: var(--color-black);
-        font-weight: var(--font-weight-bold);
-        text-decoration: underline;
-        line-height: var(--line-height-xs);
-        overflow: hidden;
-        display: inline;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .references .section-content {
-        margin-top: 0.1rem;
-      }
-
-      .references .section-content a {
-        font-weight: var(--font-weight-medium);
-        text-transform: capitalize;
-        margin-right: 0.05rem;
-      }
-
-      .references .section-content .row a:not(:first-child) {
-        margin-left: 0.06rem;
-      }
-
-      .references .section-content a,
-      .achievements .section-content a {
-        font-weight: var(--font-weight-medium);
-      }
-
-      /* Print media query */
-      @media print {
-        :root {
-          background-color: var(--color-white);
-        }
-        @page {
-          size: A4;
-          background-color: var(--color-white);
-          color: var(--color-black);
-          margin: 0;
-          padding: 24px;
-          border: none;
-        }
-
-        body {
-          background-color: var(--color-white);
-          color: var(--color-black);
-          margin: 0;
-        }
-
-        address.contact-info {
-          display: table;
-          width: 100%;
-          background-color: var(--color-blue_2) !important;
-          break-inside: avoid;
-          page-break-inside: avoid;
-          table-layout: fixed;
-        }
-
-        address.contact-info .row {
-          display: table-row;
-          page-break-inside: avoid;
-        }
-        address.contact-info a {
-          float: right !important;
-          max-width: 65% !important;
-        }
-
-        address.contact-info .row:nth-child(1) div {
-          padding-bottom: 0.7rem;
-        }
-        address.contact-info .row div {
-          display: table-cell;
-          width: 33%;
-          page-break-inside: avoid;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Mohamed Amine SAYAGH</h1>
-      <h2 class="job-title">Business Application Developer</h2>
-      <address class="contact-info">
-        <div class="row">
-          <div>
-            <span>Email: </span>
-            <a
-              href="mailto:contact@masayagh.com?subject=CV Inquiry"
-              aria-label="Email"
-              >contact@masayagh.com</a
-            >
-          </div>
-          <div>
-            <span>LinkedIn: </span>
-            <a
-              href="https://linkedin.com/in/mohamedamine-sayagh"
-              aria-label="LinkedIn"
-              >in/mohamedamine-sayagh</a
-            >
-          </div>
-          <div>
-            <span>Location: </span>
-            <p>Morocco, Casablanca</p>
-          </div>
-        </div>
-        <div class="row">
-          <div>
-            <span> Portfolio: </span>
-            <a href="https://masayagh.com/en/" aria-label="Portfolio"
-              >masayagh.com</a
-            >
-          </div>
-          <div>
-            <span> Phone: </span>
-            <a href="tel:+212616137124" aria-label="Phone">(+212) 616-137124</a>
-          </div>
-          <div>
-            <span> GitHub: </span>
-            <a href="https://github.com/aminesayagh" aria-label="GitHub"
-              >github.com/aminesayagh</a
-            >
-          </div>
-        </div>
-      </address>
-    </header>
-    <main>
-      <section id="summary">
-        <div class="section-title-container">
-          <h2 class="section-title">Summary of Experience</h2>
-          <div class="title-divider"></div>
-        </div>
-        <p class="section-content">
-          I am a <strong>Software developer</strong> who combines practical coding skills with a design foundation to create user-centred digital experiences, I now aim to apply this blend to long-term, large-scale projects and develop as a <strong>business application developer</strong>.
-        </p>
-      </section>
-      <section id="experiences" class="experiences">
-        <div class="section-title-container">
-          <h2 class="section-title">Professional Experience</h2>
-          <div class="title-divider"></div>
-        </div>
-        <article id="experience-ckm-ckp" class="experience">
-          <div class="experience-summary">
-            <div class="experience-head">
-              <h3 class="experience-title">Tardigrade</h3>
-              <p class="experience-location">(Canada)</p>
-            </div>
-            <p class="experience-duration">Nov 2024 - Jun 2025 - 8 mos</p>
-          </div>
-          <ul class="experience-content">
-            <li class="section-content">
-              Trained internally on multiple parts of a software delivery, such
-              as Odoo for the business management, internal
-              software-architecture standards, the .NET ecosystem for software
-              development, 1PMP for marketing, and UX Magic for design, by
-              iterating through mentored agile sprints.
-            </li>
-            <li class="section-content">
-              Developed 02Book SaaS, an AI-powered writing assistant for book
-              creation, by implementing a CI/CD delivery pipeline and supporting
-              B2B clients such as Orange and Le Matin.
-            </li>
-          </ul>
-        </article>
-        <article id="experience-richmedia" class="experience">
-          <div class="experience-summary">
-            <div class="experience-head">
-              <h3 class="experience-title">Rich Media</h3>
-              <p class="experience-location">(Morocco)</p>
-            </div>
-            <p class="experience-duration">Dec 2024 - Jan 2025 - 2 mos</p>
-          </div>
-          <ul class="experience-content">
-            <li class="section-content">
-              Contributed to the development of a real-time reporting for
-              Inflauditor, an influencer marketplace, by streaming data on 100
-              000+ creators, enabling partner brands to fast-track campaign
-              decisions
-            </li>
-          </ul>
-        </article>
-        <article id="experience-digital-consulting" class="experience">
-          <div class="experience-summary">
-            <div class="experience-head">
-              <h3 class="experience-title">Digital Consulting</h3>
-            </div>
-            <p class="experience-duration">Jul 2024 - Nov 2024 - 5 mos</p>
-          </div>
-          <ul class="experience-content">
-            <li class="section-content">
-              Built lead-capture web experiences for luxury brands Miratti
-              (Morocco),
-              <a href="https://french-dandy.com/">French D</a> (Dubai), and
-              <a href="https://hordestudio.com/">Horde Studio</a> (USA),
-              showcased in multiple events like Forbes Middle East.
-            </li>
-          </ul>
-        </article>
-        <article id="experience-cybercohesion" class="experience">
-          <div class="experience-summary">
-            <div class="experience-head">
-              <h3 class="experience-title">Cyber Cohesion</h3>
-              <p class="experience-location">(Singapore)</p>
-            </div>
-            <p class="experience-duration">Apr 2023 - Jul 2024 - 16 mos</p>
-          </div>
-          <ul class="experience-content">
-            <li class="section-content">
-              Programmed a <strong>Golang RESTful API</strong> handling the
-              containerization for infrastructure applications with high
-              security controls, enabling role-based isolated instances to
-              launch in 1.2 seconds per user.
-            </li>
-            <li class="section-content">
-              Orchestrated a zero-trust CTF-platform by standardizing team
-              practices, successfully hosting global events like OWASP AppSec Days, BSides Singapore, and ISACA.
-            </li>
-          </ul>
-        </article>
-        <article id="experience-jonas-agency" class="experience">
-          <div class="experience-summary">
-            <div class="experience-head">
-              <h3 class="experience-title">Jonas Agency</h3>
-              <p class="experience-location">(London)</p>
-            </div>
-            <p class="experience-duration">Jun 2022 - Jul 2023 - 14 mos</p>
-          </div>
-          <ul class="experience-content">
-            <li class="section-content">
-              Rolled out an NGINX-based deployment pipeline on a VPS hosting
-              plan, automating new web-service launches from blueprint templates
-              and shortening release cycles.
-            </li>
-            <li class="section-content">
-              Built seven full-stack web onboarding flows by partnering closely with an international client across time zones, accelerating new-user activation.
-            </li>
-          </ul>
-        </article>
-      </section>
-      <section id="skills">
-        <div class="section-title-container">
-          <h2 class="section-title">Skills</h2>
-          <div class="title-divider"></div>
-        </div>
-        <article class="skills" id="programming-languages">
-          <h3 class="skills-title">Programming Languages</h3>
-          <ul class="skills-list">
-            <li>Javascript/Typescript</li>
-            <li>PHP</li>
-            <li>C#</li>
-            <li>Golang</li>
-            <li>Python</li>
-            <li>Bash</li>
-          </ul>
-        </article>
-        <article class="skills" id="front-end-back-end">
-          <h3 class="skills-title">Front-end/ Back-end</h3>
-          <ul class="skills-list">
-            <li>React/Next.js</li>
-            <li>Blazor</li>
-            <li>Express</li>
-            <li>Bundler: Webpack...</li>
-            <li>CMS: Wordpress...</li>
-            <li>Nuxt.js</li>
-            <li>Pnpm Monorepo</li>
-            <li>Nginx</li>
-          </ul>
-        </article>
-        <article class="skills" id="cloud-services">
-          <h3 class="skills-title">Cloud Services</h3>
-          <ul class="skills-list">
-            <li>Google Cloud</li>
-            <li>Azure DevOps</li>
-            <li>Github Codespace</li>
-            <li>Vercel</li>
-            <li>Cloudflare</li>
-            <li>Heroku</li>
-          </ul>
-        </article>
-        <article class="skills" id="containerization-and-ci-cd">
-          <h3 class="skills-title">Containerization and CI/CD</h3>
-          <ul class="skills-list">
-            <li>Docker</li>
-            <li>Docker Compose</li>
-            <li>Git</li>
-            <li>Github</li>
-            <li>Github Actions</li>
-          </ul>
-        </article>
-        <article class="skills" id="database">
-          <h3 class="skills-title">Database</h3>
-          <ul class="skills-list">
-            <li>MongoDB</li>
-            <li>MySQL</li>
-            <li>PostgreSQL</li>
-            <li>Firebase</li>
-            <li>Redis</li>
-          </ul>
-        </article>
-        <article class="skills" id="testing-practice">
-          <h3 class="skills-title">Testing Practice</h3>
-          <ul class="skills-list">
-            <li>Unit Testing (Jest)</li>
-            <li>Functional Testing (Cypress, Puppeteer)</li>
-            <li>Integration Testing (Supertest)</li>
-          </ul>
-        </article>
-        <article class="skills" id="artificial-intelligence">
-          <h3 class="skills-title">Artificial Intelligence</h3>
-          <ul class="skills-list">
-            <li>OpenAI API</li>
-            <li>Claude</li>
-            <li>Cursor</li>
-            <li>Copilot</li>
-            <li>DeepSeek</li>
-            <li>MCP Agents</li>
-            <li>RAG</li>
-            <li>LangChain</li>
-            <li>qDrant</li>
-            <li>Ollama</li>
-            <li>n8n</li>
-          </ul>
-        </article>
-        <article class="skills" id="methodology-and-standards">
-          <h3 class="skills-title">Methodology and Standards</h3>
-          <ul class="skills-list">
-            <li>Agile</li>
-            <li>Scrum</li>
-            <li>Kanban</li>
-            <li>Design Pattern</li>
-            <li>Refactoring</li>
-            <li>The Standard of Hassan Habib</li>
-            <li>UX Magic</li>
-          </ul>
-        </article>
-      </section>
-    </main>
-    <hr class="divider" />
-    <footer class="footer">
-      <div class="row">
-        <section class="references" id="references">
-          <div class="section-title-container">
-            <h3 class="section-title">REFERENCES</h3>
-          </div>
-          <div class="section-content">
-            <div class="row">
-              <a
-                href="https://drive.google.com/file/d/1UzBM7WzxPOZkD3ZYToU9FgHYsCCWzD4l/view?usp=drive_link"
-                aria-label="Cyber Cohesion"
-                >Cyber Cohesion</a
-              >
-              ,
-              <a
-                href="https://drive.google.com/file/d/143J6kJH4jtJcah4JIbW-_MP__a_24xAV/view?usp=drive_link"
-                aria-label="French Dandy"
-                >French D</a
-              >
-              ,
-            </div>
-            <div class="row">
-              <a
-                href="https://docs.google.com/document/d/1Ylvz8PNhcA5ZDxVRzLO0ivu6e3476z1t"
-                aria-label="Jonas Agency"
-                >Jonas Agency</a
-              >
-              ,
-              <a
-                href="https://drive.google.com/file/d/1Yw9G4V9ci6CJOFIElqGTghFU7WvIJkoA/view"
-                aria-label="Lavish Trading"
-                >Lavish Trading</a
-              >
-            </div>
-          </div>
-        </section>
-        <section id="education" class="education">
-          <div class="section-title-container">
-            <h3 class="section-title">EDUCATION</h3>
-          </div>
-          <div class="section-content">
-            <p class="" id="">
-              <strong>Master's in Big Data & Cloud Computing</strong> University of Hassan II, Casablanca, 2023 - 2025
-            </p>
-            <p class="">
-              <strong>Bachelor's in Computer Science</strong> University of Hassan II, Casablanca, 2020 - 2023
-            </p>
-          </div>
-        </section>
+  <div class="experience-item">
+    <div class="company-header">
+      <div>
+        <div class="company-name">Timlead</div>
+        <div class="position">Software Engineer</div>
       </div>
-      <div class="row">
-        <section id="languages" class="languages">
-          <div class="section-title-container">
-            <h3 class="section-title">LANGUAGES</h3>
-          </div>
-          <div class="section-content">
-            <p>English, French, Arabic</p>
-          </div>
-        </section>
-        <section id="achievements" class="achievements">
-          <div class="section-title-container">
-            <h3 class="section-title">ACHIEVEMENTS</h3>
-          </div>
-          <div class="section-content">
-            <ul class="skills-list">
-              <li>
-                <a
-                  href="https://lavish.masayagh.com/"
-                  aria-label="Lavish"
-                  title="Lavish"
-                  >Lavish</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://french-dandy.com/"
-                  aria-label="French Dandy"
-                  title="French Dandy"
-                  >French D</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://happy-water.masayagh.com/"
-                  aria-label="Happy Water"
-                  title="Happy Water"
-                  >Happy W</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://greening-energy.com/"
-                  aria-label="Greening Eg"
-                  title="Greening Eg"
-                  >Greening Eg</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://hordestudio.com/"
-                  aria-label="Horde Studio"
-                  title="Horde Studio"
-                  >Horde S</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://cybercohesions.com/"
-                  aria-label="Cyber Cohesion"
-                  >Cyber Cohesion</a
-                >
-              </li>
-              <li>
-                <a href="https://coreas-ht.com/" aria-label="Coreas">Coreas</a>
-              </li>
-              <li>
-                <a href="https://agrosem.masayagh.com/" aria-label="Agrosem"
-                  >Agrosem</a
-                >
-              </li>
-              <li>
-                <a href="https://mirattibags.com/" aria-label="Miratti"
-                  >Miratti</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://figma.com/design/ydOVsavgbcL6QwFJiyUuBO/Portfolio?m=auto&t=NP0EyAcVDHp6E6nb-1"
-                  aria-label="Figma"
-                  >Figma</a
-                >
-              </li>
-            </ul>
-          </div>
-        </section>
+      <div class="location-date">
+        Morocco<br>
+        Jul. 2024 - Present
       </div>
-    </footer>
-  </body>
+    </div>
+    <ul class="achievements">
+      <li>Built dynamic templating system reducing development time to half for new features, collaborating with product managers to define entity relationships and API specifications</li>
+      <li>Migrated legacy deployment pipeline to modern CI/CD workflow with Docker containers, reducing build time from 15 to 4 minutes improving team velocity</li>
+      <li>Developed ticket management platform serving 100+ ISP agents, implementing real-time updates and equipment lifecycle tracking with 99% uptime</li>
+    </ul>
+  </div>
+
+  <div class="experience-item">
+    <div class="company-header">
+      <div>
+        <div class="company-name">Radiology Information System (RIS) - Mibtech</div>
+        <div class="position">Software Developer & Systems Analyst</div>
+      </div>
+      <div class="location-date">
+        Morocco<br>
+        Fev. 2025 - Mai. 2025
+      </div>
+    </div>
+    <ul class="achievements">
+      <li>Interviewed radiology technicians and medical staff to gather requirements for a Radiology Information System
+        (RIS), translating needs into technical specifications and system diagrams</li>
+      <li>Researched and compared multiple modality integration solutions based on usability, scalability, and DICOM
+        compliance to select the optimal approach for connecting medical imaging equipment</li>
+      <li>Developed and implemented the complete RIS workflow from patient scheduling to radiologist analysis and report
+        generation, ensuring complete examination lifecycle management</li>
+    </ul>
+  </div>
+
+  <div class="experience-item">
+    <div class="company-header">
+      <div>
+        <div class="company-name">Humaneo - Mibtech</div>
+        <div class="position">Software Developer</div>
+      </div>
+      <div class="location-date">
+        Morocco<br>
+        Aug. 2023 - May. 2025
+      </div>
+    </div>
+    <ul class="achievements">
+      <li>Developed automated scheduling system with constraint optimization algorithms, reducing manual planning time by 60% while ensuring compliance with labor regulations</li>
+      <li>Implemented a flexible notification system that alerts users in real-time when actions involving their input
+        are needed, streamlining communication and enhancing responsiveness across teams</li>
+      <li>Built comprehensive learning platform with video streaming, quiz engine, and progress tracking, serving 100+ employees with 95% completion rates</li>
+    </ul>
+  </div>
+
+  <div class="section-title">Skills</div>
+  <div class="skills-section">
+    <strong>Languages:</strong> JavaScript, Python, PHP, Ruby<br>
+    <strong>Frameworks:</strong> React/Next.js, Express, Laravel, Ruby on Rails<br>
+    <strong>Databases:</strong> MySQL, MongoDB, PostgreSQL, Redis<br>
+    <strong>DevOps:</strong> Docker, Kubernetes, CI/CD, Google Cloud, AWS, Jest, RSpec, Cypress
+  </div>
+
+  <div class="section-title">Education</div>
+
+  <div class="education-item">
+    <div class="company-header">
+      <div>
+        <div class="company-name">University of Hassan II, Casablanca</div>
+        <div class="education-degree">Master's in Big Data & Cloud Computing</div>
+      </div>
+      <div class="location-date">
+        Morocco<br>
+        2023 - 2025
+      </div>
+    </div>
+  </div>
+
+  <div class="education-item">
+    <div class="company-header">
+      <div>
+        <div class="company-name">University of Hassan II, Casablanca</div>
+        <div class="education-degree">Bachelor's in Computer Science</div>
+      </div>
+      <div class="location-date">
+        Morocco<br>
+        2022 - 2023
+      </div>
+    </div>
+  </div>
+
+</body>
+
 </html>
