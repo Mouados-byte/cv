@@ -19,7 +19,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     .header-left {
@@ -33,7 +33,7 @@
 
     .contact-info {
       font-size: 12px;
-      margin-bottom: 12px;
+      margin: 2px 0;
       text-decoration: none;
     }
 
@@ -52,7 +52,7 @@
       font-size: 14px;
       font-weight: bold;
       text-align: center;
-      margin: 12px 0 12px 0;
+      margin: 8px 0 8px 0;
       border-bottom: 1px solid #000;
       padding-bottom: 2px;
     }
@@ -60,7 +60,7 @@
     .experience-item,
     .project-item,
     .education-item {
-      margin-bottom: 7px;
+      margin-bottom: 5px;
     }
 
     .company-header {
@@ -88,13 +88,13 @@
     .achievements {
       font-size: 11px;
       margin-top: 2px;
-      margin-bottom: 9px;
+      margin-bottom: 5px;
       margin-left: 0;
       padding-left: 0;
     }
 
     .achievements li {
-      margin-bottom: 4px;
+      margin-bottom: 2px;
       list-style-type: disc;
       margin-left: 16px;
     }
@@ -119,6 +119,11 @@
     .education-details {
       font-size: 11px;
     }
+
+    .link {
+      color: black;
+      text-decoration: none;
+    }
   </style>
 </head>
 
@@ -126,13 +131,17 @@
   <div class="header">
     <div class="header-left">
       <div class="name">MOUAD IMAM</div>
+    </div>
+    <div>
+      <div class="contact-info">Website: <a class="link" href="https://immouad.com">immouad.com</a></div>
       <div class="contact-info">Email: imam6mouad@gmail.com</div>
     </div>
-    <img src="qr.png" alt="QR Code" class="qr-code">
   </div>
 
   <div class="summary">
-    Full-stack software engineer with 2+ years building scalable web applications and healthcare systems. Experienced in collaborating with cross-functional teams, implementing CI/CD pipelines, and delivering solutions that serve 5000+ daily users across multiple industries.
+    Full-stack software engineer with 2+ years building scalable web applications and healthcare systems. Experienced in
+    collaborating with cross-functional teams, implementing CI/CD pipelines, and delivering solutions that serve 5000+
+    daily users across multiple industries.
   </div>
 
   <div class="section-title">Experience</div>
@@ -185,10 +194,39 @@
       </div>
     </div>
     <ul class="achievements">
-      <li>Developed automated scheduling system with constraint optimization algorithms, reducing manual planning time by 60% while ensuring compliance with labor regulations</li>
-      <li>Optimized CI pipeline reducing build time from 10 to 6 minutes (40% improvement), enhancing deployment velocity and team productivity</li>
-      <li>Implemented a flexible Mailing system that alerts users in real-time when actions involving their input are needed, streamlining communication and enhancing responsiveness across teams</li>
-      <li>Built comprehensive learning platform with video streaming, quiz engine, and progress tracking, serving +100 employees</li>
+      <li>Developed automated scheduling system with constraint optimization algorithms, reducing manual planning time
+        by 60% while ensuring compliance with labor regulations</li>
+      <li>Optimized CI pipeline reducing build time from 10 to 6 minutes (40% improvement), enhancing deployment
+        velocity and team productivity</li>
+      <li>Implemented a flexible Mailing system that alerts users in real-time when actions involving their input are
+        needed, enhancing responsiveness across teams</li>
+      <li>Built comprehensive learning platform with video streaming, quiz engine, and progress tracking, serving +100
+        employees</li>
+    </ul>
+  </div>
+
+  <div class="section-title">Projects</div>
+  <div class="experience-item">
+    <div class="company-header">
+      <div>
+        <div class="company-name">ProdLoger - Intelligent Log Management Platform</div>
+        <div class="position">Academic Project - Master's Thesis (FSAC)</div>
+      </div>
+      <div class="location-date">
+        Morocco<br>
+        Feb. 2025 - Jul. 2025
+      </div>
+    </div>
+    <ul class="achievements">
+      <li>Developed an intelligent platform for real-time log analysis and anomaly detection using deep learning models
+        (BiLSTM architecture)</li>
+      <li>Achieved processing speed of <strong>120,500 logs/second</strong> with precision of 82.76% and recall of
+        93.31%</li>
+      <li>Implemented CI pipeline with GitHub Actions to automate load testing and ensure deployment stability</li>
+      <li>Designed scalable architecture using Docker Compose, with planned migration to Kubernetes for production
+        readiness</li>
+      <li>Proposed future enhancements including Transformer-based models (BERT/RoBERTa) and automated hyperparameter
+        optimization</li>
     </ul>
   </div>
 
