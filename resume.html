@@ -158,9 +158,16 @@
       </div>
     </div>
     <ul class="achievements">
-      <li>Built dynamic templating system reducing development time to half for new features, collaborating with product managers to define entity relationships and API specifications</li>
-      <li>Migrated legacy deployment pipeline to modern CI/CD workflow with Docker containers, reducing build time from 15 to 4 minutes improving team velocity</li>
-      <li>Developed ticket management platform serving 100+ ISP agents, implementing real-time updates and equipment lifecycle tracking with 99% uptime</li>
+      <li>Built a template-driven ticketing platform with workflows and conditional logic that cut template rollout time by ~50% while keeping field layouts consistent across projects and clients.</li>
+      <li>Delivered a React/Stimulus response editor with Word/PDF exports and entity mapping so agents capture structured data once and reuse it across web, API, and document outputs.</li>
+      <li>Implemented review and auto-review states with ActionCable notifications, map marker coloring, and SLA-aware visibility so ops teams see status changes as they happen.</li>
+      <li>Shipped offline-ready bundles that inline media and signatures, bypass conditional blockers safely, and keep validations consistent, letting field agents stay productive without connectivity.</li>
+      <li>Migrated the stack to Dockerized CI/CD with bin/dev hot reloads and overcommit hooks, shrinking builds from 15 to 4 minutes and smoothing steady Turbo/React delivery.</li>
+      <li>Built CSV/XLSX import and export with column analysis, mapping validation, and error surfacing, reducing support escalations during bulk ticket creation and reporting.</li>
+      <li>Automated dispatch scheduling using distance and workload scoring, added calendar and trajectory views, and supported 100+ ISP agents with assignments and 99% uptime.</li>
+      <li>Tightened permissions and template lifecycle controls—clone flows, site-scoped policies, attachment validation—so admins ship new workflows safely without exposing sensitive fields.</li>
+      <li>Instrumented ticket analytics for state counts, completion rates, and dispatch time, giving ops real-time signals and faster SLA triage.</li>
+      <li>Added offline JSON payloads for responses, inlining blobs so agents sync cleanly after reconnecting and preserving field validations.</li>
     </ul>
   </div>
 
@@ -176,9 +183,14 @@
       </div>
     </div>
     <ul class="achievements">
-      <li>Interviewed radiology technicians and medical staff to gather requirements for a Radiology Information System (RIS), translating needs into technical specifications and system diagrams</li>
-      <li>Researched and compared multiple modality integration solutions based on usability, scalability, and DICOM compliance to select the optimal approach for connecting medical imaging equipment</li>
-      <li>Developed and implemented the complete RIS workflow from patient scheduling to radiologist analysis and report generation, ensuring complete examination lifecycle management</li>
+      <li>Integrated Orthanc as a PACS server and configured DICOM Modality Worklist (MWL) to automate exam scheduling from the RIS</li>
+      <li>Designed and optimized the database schema (PostgreSQL) for patients, modalities, imaging studies, rooms, and medical reports ensuring high data consistency and traceability</li>
+      <li>Implemented user role-based access control (RBAC) to secure patient data and enforce medical confidentiality regulations</li>
+      <li>Developed API endpoints to enable real-time synchronization between RIS and PACS systems using DICOM networking protocols (C-FIND, C-STORE)</li>
+      <li>Created intuitive user interfaces for patient registration, exam ordering, and report validation to improve workflow efficiency for radiology staff</li>
+      <li>Monitored system logs and DICOM communication events to detect, troubleshoot, and resolve integration errors between imaging devices and the platform</li>
+      <li>Wrote detailed technical documentation including workflow diagrams, deployment guidelines, and integration specifications for long-term maintainability</li>
+      <li>Collaborated with DevOps practices by containerizing RIS/PACS components using Docker and configuring services for reliable on-premise deployment</li>
     </ul>
   </div>
 
@@ -194,14 +206,14 @@
       </div>
     </div>
     <ul class="achievements">
-      <li>Developed automated scheduling system with constraint optimization algorithms, reducing manual planning time
-        by 60% while ensuring compliance with labor regulations</li>
-      <li>Optimized CI pipeline reducing build time from 10 to 6 minutes (40% improvement), enhancing deployment
-        velocity and team productivity</li>
-      <li>Implemented a flexible Mailing system that alerts users in real-time when actions involving their input are
-        needed, enhancing responsiveness across teams</li>
-      <li>Built comprehensive learning platform with video streaming, quiz engine, and progress tracking, serving +100
-        employees</li>
+      <li>Added constraint-based rules to the employee scheduling module to avoid overlapping shifts, night-shift limits, and contractual violations</li>
+      <li>Reduced CI build duration by improving Docker layer caching and splitting unit/integration tests, which helped speed up deployments</li>
+      <li>Built notification emails for approvals, pending actions, and onboarding steps to make sure HR and managers respond on time</li>
+      <li>Developed a simple internal training space where employees can watch videos, answer quizzes, and track their completion status</li>
+      <li>Refactored parts of the employee management module to simplify data updates and avoid duplicate information across departments</li>
+      <li>Worked closely with HR staff to adapt rules (leave approvals, contract renewal alerts…) directly into the workflows</li>
+      <li>Improved system reliability by adding input validations and clearer error handling on critical forms (contracts, leave requests…)</li>
+      <li>Wrote technical notes and usage guidelines so that onboarding new devs and HR users became easier</li>
     </ul>
   </div>
 
