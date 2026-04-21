@@ -151,7 +151,7 @@
   <div class="experience-item">
     <div class="company-header">
       <div>
-        <div class="company-name">Myunisoft (K3) - French accounting SaaS</div>
+        <div class="company-name">Myunisoft (GeFi) - French accounting SaaS</div>
         <div class="position">Full-Stack Engineer</div>
       </div>
       <div class="location-date">
@@ -160,12 +160,11 @@
       </div>
     </div>
     <ul class="achievements">
-      <li>Served as the cross-team liaison for a 3.5-month multi-team initiative—single point of contact for inbound issues, working with the partner team to unblock their delivery while driving fixes back through our own backlog.</li>
-      <li>Shipped the Piste d'Audit addressing-identifier feature across Rails API, Angular picker modal, and a SIREN-driven typeahead wired into the legacy form layout, rolled out to 4,000+ clients.</li>
-      <li>Hardened K3 platform security: added JWT authentication to the Notifier WebSocket handshake (removing a token-in-query-string path that leaked credentials to proxies and logs); tightened global CORS with dead-origin pruning and security headers; and removed public ingress from internal services (kdoc, pdf, packer, messaging) by moving inter-service traffic to internal Kubernetes DNS with a split public/private API URL model.</li>
-      <li>Authored tenant-wide Sidekiq jobs that eliminated manual ops—automated contact enrichment against the INSEE SIRENE and VIES public APIs, plus backfills migrating COMPANY_ADDRESS and stale APPLICATION_URLs across every tenant with zero manual intervention.</li>
-      <li>Integrated Amplitude with the EU data zone, custom Quote/Invoice events, and deduplicated page views; later simplified tracking to fix a duplicate-events bug that was corrupting reporting across all users.</li>
-      <li>Hardened the document_row model with paranoid-aware associations and nil-safe checks across product, stock, and return paths, eliminating a class of production NoMethodErrors. Cut admin-console load time by disabling Turbo prefetch on heavy layouts, caching Bitbucket API calls, lazy-loading the release-version page, and replacing N+1s with nested includes.</li>
+      <li>Acted as the cross-team liaison on a multi-team initiative, serving as single point of contact for inbound issues and driving fixes across teams to unblock partner delivery.</li>
+      <li>Contributed to GeFi's addressing-identifier feature for France's RFE (Réforme Électronique) e-invoicing rollout, reaching 3,200+ clients on a French accounting SaaS.</li>
+      <li>Hardened platform security by adding JWT authentication to WebSocket handshakes (closing a token-in-URL credentials leak), tightening CORS with dead-origin pruning and security headers, and moving internal services behind Kubernetes service DNS with a split public/private API model.</li>
+      <li>Authored tenant-wide background jobs that automate business-contact enrichment from public company registries and migrate legacy data across all tenants, eliminating recurring manual ops.</li>
+      <li>Resolved systemic performance bottlenecks across the admin console, significantly cutting load times on workflows operations teams depend on daily.</li>
     </ul>
   </div>
 
