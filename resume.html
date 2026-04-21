@@ -131,7 +131,7 @@
   <div class="header">
     <div class="header-left">
       <div class="name">MOUAD IMAM</div>
-      <div class="contact-info">Full-Stack Developer (Ruby on Rails & React)</div>
+      <div class="contact-info">Full-Stack Developer (Ruby on Rails, React & Angular)</div>
     </div>
     <div>
       <div class="contact-info">Website: <a class="link" href="https://immouad.com">immouad.com</a></div>
@@ -141,12 +141,33 @@
   </div>
 
   <div class="summary">
-    Full-stack software engineer with 2+ years delivering production-ready applications using Ruby on Rails and React. 
-    Hands-on with secure workflow design, containerized deployments (Docker, CI/CD), and performance improvements.
-    Proven ability to turn complex operational needs into scalable features and polished user experiences used by 10,000+ real users across multiple domains.
+    Full-stack software engineer with 3+ years shipping production features in Ruby on Rails, React, and Angular.
+    Experience with platform security (JWT, CORS, Kubernetes ingress hardening), background automation via Sidekiq, and performance tuning (N+1 elimination, caching, lazy loading).
+    Delivered across enterprise ERP, medical imaging, and a French B2B accounting SaaS reaching 4,000+ clients.
   </div>
 
   <div class="section-title">Experience</div>
+
+  <div class="experience-item">
+    <div class="company-header">
+      <div>
+        <div class="company-name">Myunisoft (K3) - French accounting SaaS</div>
+        <div class="position">Full-Stack Engineer</div>
+      </div>
+      <div class="location-date">
+        Remote, France<br>
+        Jan. 2026 - Present
+      </div>
+    </div>
+    <ul class="achievements">
+      <li>Served as the cross-team liaison for a 3.5-month multi-team initiative—single point of contact for inbound issues, working with the partner team to unblock their delivery while driving fixes back through our own backlog.</li>
+      <li>Shipped the Piste d'Audit addressing-identifier feature across Rails API, Angular picker modal, and a SIREN-driven typeahead wired into the legacy form layout, rolled out to 4,000+ clients.</li>
+      <li>Hardened K3 platform security: added JWT authentication to the Notifier WebSocket handshake (removing a token-in-query-string path that leaked credentials to proxies and logs); tightened global CORS with dead-origin pruning and security headers; and removed public ingress from internal services (kdoc, pdf, packer, messaging) by moving inter-service traffic to internal Kubernetes DNS with a split public/private API URL model.</li>
+      <li>Authored tenant-wide Sidekiq jobs that eliminated manual ops—automated contact enrichment against the INSEE SIRENE and VIES public APIs, plus backfills migrating COMPANY_ADDRESS and stale APPLICATION_URLs across every tenant with zero manual intervention.</li>
+      <li>Integrated Amplitude with the EU data zone, custom Quote/Invoice events, and deduplicated page views; later simplified tracking to fix a duplicate-events bug that was corrupting reporting across all users.</li>
+      <li>Hardened the document_row model with paranoid-aware associations and nil-safe checks across product, stock, and return paths, eliminating a class of production NoMethodErrors. Cut admin-console load time by disabling Turbo prefetch on heavy layouts, caching Bitbucket API calls, lazy-loading the release-version page, and replacing N+1s with nested includes.</li>
+    </ul>
+  </div>
 
   <div class="experience-item">
     <div class="company-header">
@@ -156,7 +177,7 @@
       </div>
       <div class="location-date">
         Morocco<br>
-        Jul. 2024 - Present
+        Jul. 2024 - Dec. 2025
       </div>
     </div>
     <ul class="achievements">
@@ -270,11 +291,11 @@
   <div class="section-title">Skills</div>
   <div class="skills-section">
     <strong>Programming Languages:</strong> Ruby, JavaScript/TypeScript, Python, PHP, Rust, SQL, Bash<br>
-    <strong>Frontend:</strong> React, Stimulus.js, Next.js, Tailwind CSS, Hotwire, Axios<br>
-    <strong>Backend & APIs:</strong> Ruby on Rails, Node.js, Express, NestJS, Laravel, WebSockets, REST<br>
+    <strong>Frontend:</strong> React, Angular, Stimulus.js, Next.js, Tailwind CSS, Hotwire, Axios<br>
+    <strong>Backend & APIs:</strong> Ruby on Rails, Node.js, Express, NestJS, Laravel, Sidekiq, WebSockets, REST, JWT<br>
     <strong>Databases & Storage:</strong> PostgreSQL, MySQL, MongoDB, Redis, Firebase, Elasticsearch<br>
     <strong>Cloud & DevOps:</strong> Docker, Kubernetes, CI/CD, GitHub Actions, Google Cloud, AWS, Vercel, Dokku<br>
-    <strong>Monitoring & Observability:</strong> Sentry, Prometheus, Grafana, ClickHouse<br>
+    <strong>Monitoring & Observability:</strong> Sentry, Prometheus, Grafana, ClickHouse, Amplitude<br>
     <strong>Testing & QA:</strong> RSpec, Capybara, Jest, Cypress, Postman<br>
     <strong>Data & AI:</strong> TensorFlow/PyTorch (NLP), Model Training & Evaluation, Vector Search<br>
     <strong>Medical Tech Standards:</strong> DICOM, PACS, Orthanc, Modality Worklist (MWL)<br>
